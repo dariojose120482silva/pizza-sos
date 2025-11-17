@@ -1,0 +1,405 @@
+<!---->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Secular+One&display=swap"
+    rel="stylesheet">
+    <title>S.O.S Pizza -Delivery Emergencial 18:00 as 21:00 HORAS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="responcivo.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- Header Fixo -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-pizza-slice"></i>
+                    <div>
+                        <h1>S.O.S Pizza</h1>
+                        <span class="span-delivery">Delivery Emergencial Quatas, Sábados e Domigos apartir das (18:00 as 21:00 HORAS).</span>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a class="menu-emergencia" href="#emergency">Emergência pizza</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#menu">Cardápio</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="emergency">
+        <div class="hero-content">
+            <h2 class="hero-title">Emergência de Pizza? Nós Resolvemos!</h2>
+            <p>Delivery 18:00 as 21:00 HORAS - Atendimento rápido - Pizza quentinha em até 30 minutos!</p>
+        </div>
+    </section>
+
+
+    <!-- Emergency Banner -->
+
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Sobre o S.O.S Pizza</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Salvando Noites de Fome</h3>
+
+                    <p class="about-description">O <strong class="s-o-s">S.O.S Pizza</strong> nasceu da necessidade de
+                        atender emergências gastronômicas fora do horário comercial. Percebemos que a fome não respeita
+                        relógio, e alguém precisava fazer algo sobre isso!</p>
+
+                    <p>Somos especialistas em delivery emergencial de Quartas, Sábados e Domingos, das 18:00 às 21:00
+                        HORAS. Nossa missão é simples: levar pizza quentinha para salvar sua noite, seja qual for a
+                        hora.</p>
+
+                    <p>Com frota própria e equipe treinada para emergências, garantimos delivery rápido e eficiente
+                        quando você mais precisa.</p>
+
+                    <div class="emergency-features">
+
+                        <p><i class="fas fa-bolt"></i> <strong>Atendimento: Quartas, Sábados e Domingos, das 18:00 às
+                                21:00 HORAS</strong></p>
+
+                        <p><i class="fas fa-clock"></i> <strong>Entrega Rápida</strong> - Em até 30 minutos</p>
+
+                        <p><i class="fas fa-shield-alt"></i> <strong>Qualidade Garantida</strong> - Pizza sempre
+                            perfeita</p>
+
+                    </div>
+
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1595708684082-a173bb3a06c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1046&q=80"
+                        alt="Equipe S.O.S Pizza">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Formulário de Pedido -->
+    <!-- Este formulário coleta as informações do cliente e do pedido. Posicionado após o cardápio para facilitar o fluxo do usuário. -->
+    <section class="section-form" id="pedido">
+        <h2 class="formulario">Faça seu pedido</h2>
+        <form class="form" id="formPedido">
+            <!-- Campo Nome -->
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+            <!-- Campo Telefone -->
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required placeholder="(xx) xxxxx-xxxx">
+            <!-- Campo Endereço -->
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco" required placeholder="Rua, número, bairro">
+            <!-- Campo Tipo de Pizza -->
+            <label for="pizza">Tipo de Pizza:</label>
+            <input type="text" id="pizza" name="pizza" required placeholder="Ex: Calabresa">
+            <!-- Campo Quantidade -->
+            <label for="quantidade">Quantidade:</label>
+            <input type="number" id="quantidade" name="quantidade" min="1" required value="1">
+            <!-- Campo Observações -->
+            <label for="obs">Observações:</label>
+            <textarea id="obs" name="obs" placeholder="Ex: Sem cebola"></textarea>
+            <!-- Botão para enviar via WhatsApp -->
+            <button class="button" type="submit" id="btnWhatsapp">Enviar pedido pelo WhatsApp</button>
+        </form>
+    </section>
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2 class="section-title">Cardápio de Emergência</h2>
+            <div class="menu-grid">
+
+                <div class="menu-item">
+                    <div class="menu-item-badge">PLANTÃO 18:00 as 21:00 HORAS</div>
+                    <div class="menu-item-image">
+                        <img src="./img/WhatsApp Image 2025-10-20 at 09.39.58 (4).jpeg" alt="Margherita">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">MUÇARELA</h3>
+                            <span class="menu-item-price">G:R$ 39,00</span>
+                        </div>
+                        <p class="menu-item-description">Molho de tomate, muçarela orégano, tomate e azeitonas.</p>
+                    </div>
+
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-badge">PLANTÃO 18:00 as 21:00 HORAS</div>
+                    <div class="menu-item-image">
+                        <img src="./img/WhatsApp Image 2025-10-20 at 09.39.58 (4).jpeg" alt="Margherita">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">MUÇARELA</h3>
+                            
+                            <span class="menu-item-price">M:R$ 27,00</span>
+                        </div>
+                        <p class="menu-item-description">Molho de tomate, muçarela orégano, tomate e azeitonas.</p>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-badge">PLANTÃO 18:00 as 21:00 HORAS</div>
+                    <div class="menu-item-image">
+                        <img src="./img/WhatsApp Image 2025-10-18 at 19.25.20.jpeg" alt="Pepperoni">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">CALABRESA</h3>
+                            <span class="menu-item-price">G:R$ 39,00</span>
+                        </div>
+                        <p class="menu-item-description">Molho de tomate, muçarela e calabresa, cebola, orégano e
+                            azeitonas.</p>
+                    </div>
+                </div>
+
+                 <div class="menu-item">
+                    <div class="menu-item-badge">PLANTÃO 18:00 as 21:00 HORAS</div>
+                    <div class="menu-item-image">
+                        <img src="./img/WhatsApp Image 2025-10-18 at 19.25.20.jpeg" alt="Pepperoni">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">CALABRESA</h3>
+                            <span class="menu-item-price">M:R$ 29,00</span>
+                        </div>
+                        <p class="menu-item-description">Molho de tomate, muçarela e calabresa, cebola, orégano e
+                            azeitonas.</p>
+                    </div>
+                </div>
+
+
+                <div class="menu-item">
+                    <div class="menu-item-badge">PLANTÃO 18:00 as 21:00 HORAS</div>
+                    <div class="menu-item-image">
+                        <img src="./img/WhatsApp Image 2025-10-20 at 09.39.58 (1).jpeg" alt="Quatro Queijos">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">PORTUGUESA</h3>
+                            <span class="menu-item-price">G:R$ 42,00<span> 
+
+                        </div>
+                        <p class="menu-item-description">Molho de tomate, muçarela, presunto, pimentão fatiado, ovos
+                            cozidos, orégano e azeitonas.</p>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-badge">PLANTÃO 18:00 as 21:00 HORAS</div>
+                    <div class="menu-item-image">
+                        <img src="./img/WhatsApp Image 2025-10-20 at 09.39.58 (1).jpeg" alt="Quatro Queijos">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">PORTUGUESA</h3>
+                            <span class="menu-item-price">M:R$ 32,00</span>
+                        </div>
+                        <p class="menu-item-description">Molho de tomate, muçarela, presunto, pimentão fatiado, ovos
+                            cozidos, orégano e azeitonas.</p>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-badge">PLANTÃO 18:00 as 21:00 HORAS</div>
+                    <div class="menu-item-image">
+                        <img src="./img/WhatsApp Image 2025-10-20 at 09.39.58.jpeg" alt="Calabresa">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">FRANGO</h3>
+                            <span class="menu-item-price">G:R$ 42,00</span>
+                        </div>
+                        <p class="menu-item-description">Molho de tomate, muçarela, frango, milho, orégano e azeitonas.
+                        </p>
+                    </div>
+                </div>
+
+                
+                <div class="menu-item">
+                    <div class="menu-item-badge">PLANTÃO 18:00 as 21:00 HORAS</div>
+                    <div class="menu-item-image">
+                        <img src="./img/WhatsApp Image 2025-10-20 at 09.39.58.jpeg" alt="Calabresa">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">FRANGO</h3>
+                            <span class="menu-item-price">M:R$ 32,00</span>
+                        </div>
+                        <p class="menu-item-description">Molho de tomate, muçarela, frango, milho, orégano e azeitonas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="div-botao">
+            <button class="botao-link">
+                <a class="link" href="#pedido">Faça seu pedido</a>
+            </button>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Central de Emergências</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Base Central</h4>
+                            <p>Sítio Destino</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Telefone de Emergência</h4>
+                            <p>(87) 98100-4878</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>E-mail</h4>
+                            <p>darioflauta@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Horário de Atendimento</h4>
+                            <table class="hours-table">
+                                <tr>
+                                    <td>Quartas, Sábados e Domingos</td>
+                                    <td>18:00 as 21:00 HORAS</td>
+                                </tr>
+                                <tr>
+                                    <td>Feriados</td>
+                                    <td>18:00 as 21:00 HORAS</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.075426745292!2d-46.65342658440729!3d-23.565734367638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1633451418345!5m2!1spt-BR!2sbr"
+                        allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>S.O.S Pizza</h4>
+                    <p>Seu serviço de delivery emergencial das 18:00 as 21:00 HORAS.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/5587981004878" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Links de Emergência</h4>
+                    <ul class="footer-links">
+                        <li><a href="#emergency">Emergência de pizza</a></li>
+                        <li><a href="#about">Sobre Nós</a></li>
+                        <li><a href="#menu">Cardápio</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Horario de atendimento: 18:00 as 21:00 HORAS</h4>
+                    <ul class="footer-links">
+                        <li>Quartas, Sábados e Domingos: 18:00 as 21:00 HORAS</li>
+                        <li>Feriados: PLANTÃO 18:00 as 21:00 HORAS</li>
+                        <li>WhatsApp: (87) 98100-4878</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2023 S.O.S Pizza. Todos os direitos reservados.</p>
+                <p>#DeliveryEmergencial</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+<!--Este site ja esta no ar, porem fiz algumas alteracões como, as imagens do cadapio,e removi   
+algumas palavras repetidas, fiz altercões no paragafo das imagens do cardapio que relata os
+ingredientes e almentei a largura do botão do cardapio que leva pro formulario de fazer pedidos. como fazer que as alteracões atualizem no gitihub tambem. Só quero as instrucões-->
+
+<!--
+$ git init
+Initialized empty Git repository in C:/Users/Cliente/Desktop/Git-repositórios/s.o.s-pizza-(2)/.git/-->
+
+
+<!--$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        img/
+        index.html
+        script.js
+        style.css
+
+nothing added to commit but untracked files present (use "git add" to track) -->
+
+<!--$ git add . 
+warning: in the working copy of 'style.css', LF will be replaced by CRLF the next time Git touches it-->
+
+<!-- git commit -m "troquei as imagens do cardapio e deletei augumas palavras repetidas"-->
+
+  <!--https://github.com/dariojose120482silva/s.o.s-pizza.git-->
