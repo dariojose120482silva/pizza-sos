@@ -11,15 +11,13 @@
 
 #pedido h2 {
     text-align: center;
-    color: #080602;
+    color: #f7a605;
     margin-bottom: 18px;
-    text-shadow: #9f95c6 0px 0px 10px;
+    text-shadow: #fa2609 0px 0px 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.formulario{
-    text-shadow: #f82803 0px 0px 10px;
-}
+
 
 #formPedido label {
     
@@ -44,7 +42,7 @@
 
 #formPedido input::placeholder,
 #formPedido textarea::placeholder {
-    color: #ee5407;
+    color: #2c2420;
     font-style: italic;
     opacity: 0.8;
 }
@@ -151,7 +149,6 @@ body {
 header {
     padding: 60px 20px;
     text-shadow: 2px 2px 4px rgba(10, 10, 10, 0.5);
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -197,6 +194,7 @@ header {
 
 .span-delivery{
   color: #10140f;
+  font-size: large;
   text-shadow: #f80a02 10px 20px 20px;
   box-shadow: #820808;
   box-shadow: #06110a ;
@@ -426,8 +424,19 @@ nav a:hover {
     margin-bottom: 50px;
     color: var(--secondar); /* Amarelo para destaque */
     position: relative;
-    color: #f50800;
-    text-shadow: 3px 4px 6px rgba(65, 249, 9, 0.808);
+    color: #0b0808;
+    text-shadow: 3px 4px 6px rgba(249, 49, 9, 0.808);
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.section-title-central{
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--secondar); /* Amarelo para destaque */
+    position: relative;
+    color: #065ef7;
+    text-shadow: 3px 4px 6px rgba(249, 73, 9, 0.808);
     font-size: 2.2rem;
     font-weight: bold;
 }
@@ -467,9 +476,9 @@ nav a:hover {
 }
 
 .s-o-s{
-    color: #2ad00ce4;
+    color: #f1f105e4;
     font-weight: bold;
-    text-shadow: 3px 4px 6px rgba(0, 0, 0, 0.5);
+    text-shadow: 3px 4px 6px rgba(244, 64, 64, 0.986);
 }
 
 .about-text h3 {
