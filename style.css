@@ -735,6 +735,48 @@ nav a:hover {
     color: var(--dark);
 }
 
+/* Estilização básica do botão de ação */
+.btn-adicionar-pedido {
+    display: inline-block;
+    background-color: #388E3C; /* Exemplo de cor verde (Ação) */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    text-decoration: none; /* Remove o sublinhado padrão do link */
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px; /* Adiciona um espaço abaixo da descrição */
+    transition: background-color 0.3s;
+}
+
+.btn-adicionar-pedido:hover {
+    background-color: #2E7D32; /* Um tom mais escuro ao passar o mouse */
+}
+
+/* Estilização para alinhar os botões Grande e Média lado a lado */
+
+.menu-item-actions {
+    display: flex;             /* 1. Ativa o layout flexível */
+    gap: 10px;                 /* 2. Adiciona um espaçamento de 10px entre os botões */
+    margin-top: 15px;
+    justify-content: space-between; /* 3. Garante espaço entre os botões (opcional, pode ser 'center' ou 'space-around') */
+}
+
+.btn-adicionar-pedido {
+    /* 4. Faz com que os botões dividam o espaço igualmente */
+    flex-grow: 1; 
+    /* Mantenha suas outras regras de estilo de botão aqui (cor, padding, etc.) */
+    padding: 10px 5px; 
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Container do botão para controle de alinhamento */
+.menu-item-actions {
+    text-align: right; /* Opcional: Alinha o botão à direita do card */
+    margin-top: 10px;
+}
+
 .hours-table {
     width: 100%;
     border-collapse: collapse;
