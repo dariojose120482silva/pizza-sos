@@ -1,65 +1,109 @@
 
-document.addEventListener('DOMContentLoaded', function() {
 
-    const campoPizza = document.getElementById('pizza');
-    const secaoPedido = document.getElementById('pedido'); 
+// Usamos o DOMContentLoaded para garantir que o navegador leu todo o HTML antes do JS rodar
+document.addEventListener('DOMContentLoaded', function() {
     
-    // 🚨 NOVO: Referência para o campo oculto do preço (adicionado no HTML)
-    const campoPreco = document.getElementById('preco'); 
-    
-    // 1. === INTERCEPTA O CLIQUE EM TODOS OS BOTÕES ===
+    // 1. Definição das variáveis globais do sistema
+    let carrinho = [];
+    const listaPizzasElement = document.getElementById('lista-pizzas');
+    const valorTotalElement = document.getElementById('valor-total');
+    const bairroSelect = document.getElementById('bairro');
+
+    // 2. Evento para atualizar o total quando o bairro mudar
+    if (bairroSelect) {
+        bairroSelect.addEventListener('change', atualizarInterface);
+    }
+
+    // 3. Captura cliques nos botões do cardápio
     document.querySelectorAll('.btn-adicionar-pedido').forEach(button => {
         button.addEventListener('click', function(e) {
-            e.preventDefault(); 
+            e.preventDefault();
+            const nome = this.getAttribute('data-pizza');
+            const preco = parseFloat(this.getAttribute('data-preco').replace(',', '.'));
             
-            // 🚨 MUDANÇA 1: LÊ O NOME DA PIZZA E O PREÇO DO BOTÃO CLICADO
-            const itemSelecionado = this.getAttribute('data-pizza'); 
-            const precoSelecionado = this.getAttribute('data-preco');
-
-            // Verifica se todos os elementos necessários existem
-            if (itemSelecionado && campoPizza && secaoPedido && campoPreco) {
-                
-                // 1. Preenche o campo de texto visível com o nome e tamanho
-                campoPizza.value = itemSelecionado;
-                
-                // 2. Preenche o campo oculto com o preço
-                campoPreco.value = precoSelecionado; 
-
-                // 3. Rola para a seção do pedido
-                setTimeout(() => {
-                    secaoPedido.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }, 10);
-            }
+            carrinho.push({ nome, preco });
+            atualizarInterface();
+            
+            // Feedback visual: rola até o carrinho
+            document.getElementById('pedido').scrollIntoView({ behavior: 'smooth' });
         });
     });
 
-    // 2. === CÓDIGO DE ENVIO DO WHATSAPP ===
-    
-    document.getElementById('formPedido').addEventListener('submit', function(e) {
-        e.preventDefault(); 
-        
-        var nome = document.getElementById('nome').value;
-        var telefone = document.getElementById('telefone').value;
-        var endereco = document.getElementById('endereco').value;
-        var pizza = document.getElementById('pizza').value;
-        var quantidade = document.getElementById('quantidade').value;
-        
-        // 🚨 MUDANÇA 2: LÊ O PREÇO DO CAMPO OCULTO
-        var preco = document.getElementById('preco').value; 
-        
-        var obs = document.getElementById('obs').value;
+    // 4. Função principal de atualização (Coração do sistema)
+    function atualizarInterface() {
+        if (!listaPizzasElement || !valorTotalElement) return;
 
-        // 🚨 MUDANÇA 3: INCLUI O PREÇO NA MENSAGEM FINAL
-        var mensagem = `Olá! Meu nome é ${nome}.\nTelefone: ${telefone}\nEndereço: ${endereco}\nPedido: ${quantidade} pizza(s) de ${pizza}. Total estimado: R$ ${preco}.`;
-        
-        if(obs.trim() !== "") {
-            mensagem += `\nObservações: ${obs}`;
+        listaPizzasElement.innerHTML = '';
+        let subtotal = 0;
+
+        if (carrinho.length === 0) {
+            listaPizzasElement.innerHTML = '<li style="color: #666; font-style: italic;">Seu carrinho está vazio</li>';
         }
 
-        var mensagemCodificada = encodeURIComponent(mensagem);
-        var numeroPizzaria = '5587981004878';
-        var linkWhatsapp = `https://wa.me/${numeroPizzaria}?text=${mensagemCodificada}`;
+        carrinho.forEach((item, index) => {
+            subtotal += item.preco;
+            const li = document.createElement('li');
+            li.className = 'item-carrinho';
+            li.innerHTML = `
+                <span>${item.nome} - R$ ${item.preco.toFixed(2).replace('.', ',')}</span>
+                <button type="button" class="btn-remover" data-index="${index}">X</button>
+            `;
+            listaPizzasElement.appendChild(li);
+        });
 
-        window.open(linkWhatsapp, '_blank');
+        // Cálculo da Taxa
+        const opcaoSelecionada = bairroSelect.options[bairroSelect.selectedIndex];
+        const taxaEntrega = parseFloat(opcaoSelecionada.getAttribute('data-taxa')) || 0;
+        const totalGeral = subtotal + taxaEntrega;
+
+        // Atualiza os valores na tela
+        valorTotalElement.innerText = totalGeral.toFixed(2).replace('.', ',');
+        window.taxaAtual = taxaEntrega; // Guarda para o WhatsApp
+    }
+
+    // 5. Delegar evento de remover (para funcionar em botões criados dinamicamente)
+    document.addEventListener('click', function(e) {
+        if (e.target && e.target.classList.contains('btn-remover')) {
+            const index = e.target.getAttribute('data-index');
+            carrinho.splice(index, 1);
+            atualizarInterface();
+        }
     });
+
+    // 6. Envio do Formulário para WhatsApp
+    const form = document.getElementById('formPedido');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            if (carrinho.length === 0) {
+                alert("O seu carrinho está vazio!");
+                return;
+            }
+
+            const nomeCliente = document.getElementById('nome').value;
+            const endereco = document.getElementById('endereco').value;
+            const bairroNome = bairroSelect.options[bairroSelect.selectedIndex].text;
+            const obs = document.getElementById('obs').value;
+            const totalFinal = valorTotalElement.innerText;
+
+            let itensTexto = "";
+            carrinho.forEach((item) => {
+                itensTexto += `\n- ${item.nome}: R$ ${item.preco.toFixed(2).replace('.', ',')}`;
+            });
+
+            const mensagem = `🍕 *SOS PIZZA - PEDIDO* 🍕\n\n` +
+                             `*Cliente:* ${nomeCliente}\n` +
+                             `*Endereço:* ${endereco}\n` +
+                             `*Local:* ${bairroNome}\n` +
+                             `-----------------------------\n` +
+                             `*Itens:*${itensTexto}\n` +
+                             `-----------------------------\n` +
+                             `*Taxa:* R$ ${window.taxaAtual.toFixed(2).replace('.', ',')}\n` +
+                             `*TOTAL:* R$ ${totalFinal}\n\n` +
+                             `*OBS:* ${obs || 'Nenhuma'}`;
+
+            window.open(`https://wa.me/5587981004878?text=${encodeURIComponent(mensagem)}`, '_blank');
+        });
+    }
 });

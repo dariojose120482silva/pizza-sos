@@ -96,7 +96,7 @@
 
 
     <section id="pedido" class="pedido">
-        <h2 class="formulario">Faça seu pedido</h2>
+        <h2 class="formulario">Seu Carrinho</h2>
         <form class="form" id="formPedido">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required placeholder="Seu nome">
@@ -107,18 +107,29 @@
             <label for="endereco">Endereço:</label>
             <input type="text" id="endereco" name="endereco" required placeholder="Rua, número, bairro">
 
-            <label for="pizza">Tipo de Pizza:</label>
-            <input type="text" id="pizza" name="pizza" required placeholder="Ex: Calabresa" readonly>
+            <label for="bairro">Selecione endereço com (Taxa de Entrega):</label>
+            <select id="bairro" name="bairro" required
+                style="width: 100%; padding: 12px; margin-bottom: 18px; border-radius: 6px; border: 1px solid #979292; background-color: rgba(231, 225, 225, 0.767);">
+                <option value="" data-taxa="0">Selecione seu endereço...</option>
+                <option value="Fz Barra" data-taxa="3.00">Fz: Barra - R$ 3,00</option>
+                <option value="Fz Racharia" data-taxa="5.00">FZ: Racharia - R$ 5,00</option>
+                <option value="Fz Mlh do Canto" data-taxa="5.00">FZ: MLH: do Canto - R$ 5,00</option>
+                <option value="Umas" data-taxa="3.00">Úmãs - R$ 3,00</option>
+                <option value="Retirada no Local" data-taxa="0">Vou retirar no local - Grátis</option>
+            </select>
 
-            <input type="hidden" id="preco" name="preco">
+            <div id="carrinho-container" class="carrinho-estilo">
+                <ul id="lista-pizzas">
+                </ul>
+                <div class="total-container">
+                    <strong>Total do Pedido: R$ <span id="valor-total">0,00</span></strong>
+                </div>
+            </div>
 
-            <label for="quantidade">Quantidade:</label>
-            <input type="number" id="quantidade" name="quantidade" min="1" required value="1">
+            <label for="obs">Observações Gerais:</label>
+            <textarea id="obs" name="obs" placeholder="Ex: Trazer troco para R$ 100,00 ou retirar cebola."></textarea>
 
-            <label for="obs">Observações:</label>
-            <textarea id="obs" name="obs" placeholder="Ex: Sem cebola"></textarea>
-
-            <button class="button" type="submit" id="btnWhatsapp">Enviar pedido pelo WhatsApp</button>
+            <button class="button" type="submit" id="btnWhatsapp">Finalizar Pedido pelo WhatsApp</button>
         </form>
     </section>
 
@@ -138,7 +149,7 @@
                     <div class="menu-item-content">
                         <div class="menu-item-header">
                             <h3 class="menu-item-name">MUÇARELA</h3>
-                            <span class="menu-item-price">R$ 37,00<br>Média: R$ 27,00</span>
+                          
                         </div>
                         <p class="menu-item-description">Molho de tomate, muçarela orégano, tomate e azeitonas.</p>
                         <div class="menu-item-actions">
@@ -162,7 +173,7 @@
                     <div class="menu-item-content">
                         <div class="menu-item-header">
                             <h3 class="menu-item-name">CALABRESA</h3>
-                            <span class="menu-item-price">R$ 39,00 <br>Média: R$ 29,00</span>
+                            
                         </div>
                         <p class="menu-item-description">Molho de tomate, muçarela e calabresa, cebola, orégano e
                             azeitonas.</p>
@@ -187,7 +198,7 @@
                     <div class="menu-item-content">
                         <div class="menu-item-header">
                             <h3 class="menu-item-name">PORTUGUESA</h3>
-                            <span class="menu-item-price">R$ 42,00 <br>Média: R$ 32,00</span>
+                            
                         </div>
                         <p class="menu-item-description">Molho de tomate, muçarela, presunto, pimentão fatiado, ovos
                             cozidos, orégano e azeitonas.</p>
@@ -212,7 +223,7 @@
                     <div class="menu-item-content">
                         <div class="menu-item-header">
                             <h3 class="menu-item-name">FRANGO</h3>
-                            <span class="menu-item-price">R$ 42,00 <br>Média: R$ 32,00</span>
+                          
                         </div>
                         <p class="menu-item-description">Molho de tomate, muçarela, frango, milho, orégano e azeitonas.
                         </p>
