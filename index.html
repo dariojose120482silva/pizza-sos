@@ -94,10 +94,11 @@
         </div>
     </section>
 
-
-    <section id="pedido" class="pedido">
-        <h2 class="formulario">Seu Carrinho</h2>
+    <section class="section-form">
+       
+        
         <form class="form" id="formPedido">
+             <h2 class="form-carrinho">Seu Carrinho</h2>
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required placeholder="Seu nome">
 
@@ -105,14 +106,17 @@
             <input type="tel" id="telefone" name="telefone" required placeholder="(xx) xxxxx-xxxx">
 
             <label for="endereco">Endereço:</label>
-            <input type="text" id="endereco" name="endereco" required placeholder="Rua, número, bairro">
+            <input type="text" id="endereco" name="endereco" required placeholder="Rua, número ou ponto de referência">
 
-            <label for="bairro">Selecione endereço com (Taxa de Entrega):</label>
+            <label for="bairro">Localização (Taxa de Entrega):</label>
             <select id="bairro" name="bairro" required
                 style="width: 100%; padding: 12px; margin-bottom: 18px; border-radius: 6px; border: 1px solid #979292; background-color: rgba(231, 225, 225, 0.767);">
-                <option value="" data-taxa="0">Selecione seu endereço...</option>
-                <option value="Fz Barra" data-taxa="3.00">Fz: Barra - R$ 3,00</option>
-                <option value="Fz Racharia" data-taxa="5.00">FZ: Racharia - R$ 5,00</option>
+
+                <option value="Sitio Destino" data-taxa="0" selected>📍 Moro no Sítio Destino - Taxa - (0).</option>
+
+
+                <option value="FZ Barra" data-taxa="3.00">FZ: Barra - R$ 3,00</option>
+                <option value="FZ Racharia" data-taxa="5.00">FZ: Racharia - R$ 5,00</option>
                 <option value="Fz Mlh do Canto" data-taxa="3.00">FZ: MLH: do Canto - R$ 3,00</option>
                 <option value="Umas" data-taxa="3.00">Úmãs - R$ 3,00</option>
                 <option value="Retirada no Local" data-taxa="0">Vou retirar no local - Grátis</option>
@@ -136,6 +140,9 @@
 
 
     <!-- Menu Section -->
+
+
+    <!-- Menu Section -->
     <section id="menu" class="menu">
         <div class="container">
             <h2 class="section-title">Cardápio de Emergência</h2>
@@ -149,7 +156,7 @@
                     <div class="menu-item-content">
                         <div class="menu-item-header">
                             <h3 class="menu-item-name">MUÇARELA</h3>
-                          
+
                         </div>
                         <p class="menu-item-description">Molho de tomate, muçarela orégano, tomate e azeitonas.</p>
                         <div class="menu-item-actions">
@@ -173,7 +180,7 @@
                     <div class="menu-item-content">
                         <div class="menu-item-header">
                             <h3 class="menu-item-name">CALABRESA</h3>
-                            
+
                         </div>
                         <p class="menu-item-description">Molho de tomate, muçarela e calabresa, cebola, orégano e
                             azeitonas.</p>
@@ -198,7 +205,7 @@
                     <div class="menu-item-content">
                         <div class="menu-item-header">
                             <h3 class="menu-item-name">PORTUGUESA</h3>
-                            
+
                         </div>
                         <p class="menu-item-description">Molho de tomate, muçarela, presunto, pimentão fatiado, ovos
                             cozidos, orégano e azeitonas.</p>
@@ -223,7 +230,33 @@
                     <div class="menu-item-content">
                         <div class="menu-item-header">
                             <h3 class="menu-item-name">FRANGO</h3>
-                          
+
+                        </div>
+                        <p class="menu-item-description">Molho de tomate, muçarela, frango, milho, orégano e azeitonas.
+                        </p>
+                        <div class="menu-item-actions">
+                            <a href="#" class="btn-adicionar-pedido btn-grande" data-pizza="FRANGO (GRANDE)"
+                                data-preco="42,00">
+                                Pizza Grande R$ 42,00
+                            </a>
+
+                            <a href="#" class="btn-adicionar-pedido btn-media" data-pizza="FRANGO (MÉDIA)"
+                                data-preco="32,00">
+                                Pizza Média R$ 32,00
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-badge">PLANTÃO 18:00 as 21:00 HORAS</div>
+                    <div class="menu-item-image">
+                        <img src="./img/WhatsApp Image 2025-10-20 at 09.39.58.jpeg" alt="Calabresa">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">FRANGO</h3>
+
                         </div>
                         <p class="menu-item-description">Molho de tomate, muçarela, frango, milho, orégano e azeitonas.
                         </p>

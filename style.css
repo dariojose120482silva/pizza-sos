@@ -1,26 +1,33 @@
 /* Formulário de Pedido - Estilização moderna e responsiva */
+
 #pedido {
-   
-    background: var(--light);
+    background: #ffffff;
+    /* Cor sólida para o fundo do cartão */
     border-radius: 12px;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
-    padding: 32px 24px;
-    margin: 40px auto;
-    max-width: 400px;
-}
+    padding: 20px;
+    width: 100%;
+    /* Ele preenche o container pai */
+    margin: 0;
 
-#pedido h2 {
-    text-align: center;
-    color: #f7a605;
-    margin-bottom: 18px;
-    text-shadow: #fa2609 0px 0px 10px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 
+
+/* Título "Seu Carrinho" dentro do formulário */
+.form-carrinho  {
+    text-align: center !important;
+    color: #f7a605 !important; /* Laranja/Amarelo */
+    margin-bottom: 25px !important;
+    font-size: 1.8rem !important;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+    text-shadow: #fa2609 0px 0px 10px !important; /* Brilho neon vermelho */
+    display: block !important;
+    width: 100% !important;
+}
 
 #formPedido label {
-    
+
     display: block;
     margin-bottom: 6px;
     font-weight: 600;
@@ -30,29 +37,32 @@
 #formPedido input,
 #formPedido textarea {
     width: 100%;
+    max-width: 100%;
     border-radius: 6px;
-    font-size: 1rem;
-    background: #f4f3f077;
+    font-size: 0.95rem;
+    background: #bcbcb877;
     transition: border-color 0.2s;
-    margin-bottom: 18px;
-    padding: 12px 10px;
+    margin-bottom: 12px;
+    padding: 8px 10px;
     box-sizing: border-box;
     border: none;
 }
 
 #formPedido input::placeholder,
 #formPedido textarea::placeholder {
-    color: #2c2420;
+    color: #4d4a49;
     font-style: italic;
     opacity: 0.8;
 }
 
 #formPedido input:focus,
 #formPedido textarea:focus {
-    border-color: var(--primary);
+    border-color: #065ef7;
 }
 
 #formPedido button {
+
+    max-width: 100%;
     width: 100%;
     color: #161916;
     border: none;
@@ -67,38 +77,50 @@
     text-shadow: #fb0707 0px 0px 10px;
 }
 
-.button{
+.button {
     transition: background 0.8s;
     background-color: #060611;
 
 }
 
-.button:hover{
+.button:hover {
     transform: translateY(-6px);
-    
+
 }
 
 #formpedido button:hover {
-  
+
     background: #07e659;
     color: #d41313;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.form{
-    background-color: #07e6594b;
-    padding: 20px;
+
+
+.form {
+    background-color: #97c1a64b;
+    /* Seu verde transparente */
+    padding: 15px 20px;
     border-radius: 8px;
+    max-width: 500px;
+    /* ESTA É A TRAVA DE SEGURANÇA */
+    margin: 40px auto;
+    /* 60px de espaço no topo e centraliza horizontalmente */
+    display: block;
+    /* Garante que o auto funcione */
 }
 
-.section-form{
-    background-color: #070be6;
+.section-form {
+   background-color: transparent; 
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Mantém o formulário no meio da tela */ 
 }
 
 .carrinho-estilo {
     background: #fff;
-    border: 2px dashed #e6a707;
+    border: 2px dashed #dcaa22;
     border-radius: 8px;
     padding: 15px;
     margin-bottom: 20px;
@@ -144,38 +166,45 @@
 }
 
 :root {
-    --primary: #8338EC;      /* Roxo Vibrante */
-    --secondary: #FFBE0B;    /* Amarelo Solar */
-    --accent: #FB5607;       /* Laranja Intenso */
-    --body-bg: #121212;      /* Fundo Preto Escuro */
-    --section-bg: #1E1E1E;   /* Fundo de Seção Cinza Escuro */
-    --text-light: #EAEAEA;   /* Texto Claro */
-    --text-dark: #333333;    /* Texto para fundos claros */
+    --primary: #8338EC;
+    /* Roxo Vibrante */
+    --secondary: #FFBE0B;
+    /* Amarelo Solar */
+    --accent: #FB5607;
+    /* Laranja Intenso */
+    --body-bg: #121212;
+    /* Fundo Preto Escuro */
+    --section-bg: #1E1E1E;
+    /* Fundo de Seção Cinza Escuro */
+    --text-light: #EAEAEA;
+    /* Texto Claro */
+    --text-dark: #333333;
+    /* Texto para fundos claros */
 }
 
 html {
     scroll-behavior: smooth;
-     /* Habilita a rolagem suave para 
+    /* Habilita a rolagem suave para 
      âncoras */
 }
 
 
 body {
     background-image: url('https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
-     background-size: cover;
-    background-position: center;
-     /* Centraliza a imagem de fundo */
-    background-position: center;
-   
-      /* Evita que a imagem se repita */
-     background-repeat: no-repeat;
-   
-       /* Faz a imagem cobrir todo o espaço do contêiner */
     background-size: cover;
-   
-        /* Opcional: Adiciona um pouco de preenchimento para o texto não ficar colado nas bordas */
+    background-position: center;
+    /* Centraliza a imagem de fundo */
+    background-position: center;
+
+    /* Evita que a imagem se repita */
+    background-repeat: no-repeat;
+
+    /* Faz a imagem cobrir todo o espaço do contêiner */
+    background-size: cover;
+
+    /* Opcional: Adiciona um pouco de preenchimento para o texto não ficar colado nas bordas */
     padding: 60px 20px;
-    
+
     background-color: var(--light);
     color: var(--text);
     line-height: 1.6;
@@ -210,7 +239,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-   
+
 }
 
 .logo {
@@ -227,7 +256,7 @@ header {
 .logo h1 {
     font-size: 1.8rem;
     font-weight: 800;
-     color: #07fb13;
+    color: #07fb13;
 }
 
 .logo span {
@@ -237,13 +266,13 @@ header {
     opacity: 0.9;
 }
 
-.span-delivery{
-  color: #10140f;
-  font-size: large;
-  text-shadow: #f80a02 10px 20px 20px;
-  box-shadow: #820808;
-  box-shadow: #06110a ;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.span-delivery {
+    color: #10140f;
+    font-size: large;
+    text-shadow: #f80a02 10px 20px 20px;
+    box-shadow: #820808;
+    box-shadow: #06110a;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 nav ul {
@@ -259,7 +288,6 @@ nav a {
     transition: all 0.3s ease;
     padding: 5px 10px;
     border-radius: 4px
-   
 }
 
 nav a:hover {
@@ -356,14 +384,14 @@ nav a:hover {
     animation: emergency-pulse 1.5s infinite;
 }
 
-.div-botao{
+.div-botao {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 80px;
 }
 
-.botao-link{
+.botao-link {
     background-color: #07fb13;
     color: #07e659;
     padding: 10px;
@@ -380,11 +408,11 @@ nav a:hover {
     transform: translateY(-3px);
 }
 
-.link{
+.link {
     color: #080813;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-decoration: none;
-    text-shadow:  #e61d07 2px 0px 0px;
+    text-shadow: #e61d07 2px 0px 0px;
 }
 
 
@@ -397,18 +425,18 @@ nav a:hover {
         url('https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1200&q=80');
     background-size: cover;
     background-position: center;
-     /* Centraliza a imagem de fundo */
+    /* Centraliza a imagem de fundo */
     background-position: center;
-   
-      /* Evita que a imagem se repita */
-     background-repeat: no-repeat;
-   
-       /* Faz a imagem cobrir todo o espaço do contêiner */
+
+    /* Evita que a imagem se repita */
+    background-repeat: no-repeat;
+
+    /* Faz a imagem cobrir todo o espaço do contêiner */
     background-size: cover;
-   
-        /* Opcional: Adiciona um pouco de preenchimento para o texto não ficar colado nas bordas */
+
+    /* Opcional: Adiciona um pouco de preenchimento para o texto não ficar colado nas bordas */
     padding: 60px 20px;
-   
+
     color: rgb(210, 186, 186);
     text-align: center;
     padding: 15px;
@@ -425,23 +453,23 @@ nav a:hover {
     text-shadow: 3px 4px 6px rgba(246, 3, 3, 0.93);
 }
 
-.pdois{
+.pdois {
     background-color: #91f40751;
-   border-bottom-left-radius: 5px;
-   border-bottom-right-radius: 5px;
-   padding: 5px;
-   text-shadow: 3px 4px 6px rgba(246, 3, 3, 0.93);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 5px;
+    text-shadow: 3px 4px 6px rgba(246, 3, 3, 0.93);
 }
 
-.emergency-banner h3  {
+.emergency-banner h3 {
     color: #000;
     font-size: 1.5rem;
     margin-bottom: 5px;
-    
+
 }
 
 .emergency-banner p {
-    
+
     color: #000;
     font-size: 1.1rem;
     opacity: 0.9;
@@ -449,8 +477,8 @@ nav a:hover {
 
 /* About Section */
 .about {
-   
-    background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.9)),
+
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9)),
         url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80');
     background-size: cover;
     background-position: center;
@@ -467,7 +495,8 @@ nav a:hover {
 .section-title {
     text-align: center;
     margin-bottom: 50px;
-    color: var(--secondar); /* Amarelo para destaque */
+    color: var(--secondar);
+    /* Amarelo para destaque */
     position: relative;
     color: #0b0808;
     text-shadow: 3px 4px 6px rgba(249, 49, 9, 0.808);
@@ -475,10 +504,11 @@ nav a:hover {
     font-weight: bold;
 }
 
-.section-title-central{
+.section-title-central {
     text-align: center;
     margin-bottom: 50px;
-    color: var(--secondar); /* Amarelo para destaque */
+    color: var(--secondar);
+    /* Amarelo para destaque */
     position: relative;
     color: #065ef7;
     text-shadow: 3px 4px 6px rgba(249, 73, 9, 0.808);
@@ -486,10 +516,10 @@ nav a:hover {
     font-weight: bold;
 }
 
-.contact-details{
+.contact-details {
     color: #030d02e4;
     font-weight: bold;
-    text-shadow: 3px 4px 6px rgb(4, 8, 243) ;
+    text-shadow: 3px 4px 6px rgb(4, 8, 243);
     background-color: #a0f20966;
     border-radius: 5px;
     padding: 10px;
@@ -500,7 +530,8 @@ nav a:hover {
     display: block;
     width: 80px;
     height: 3px;
-    background-color: var(--primary); /* Roxo para o detalhe */
+    background-color: var(--primary);
+    /* Roxo para o detalhe */
     margin: 15px auto;
 }
 
@@ -520,7 +551,7 @@ nav a:hover {
     -webkit-backdrop-filter: blur(20px);
 }
 
-.s-o-s{
+.s-o-s {
     color: #f1f105e4;
     font-weight: bold;
     text-shadow: 3px 4px 6px rgba(244, 64, 64, 0.986);
@@ -540,8 +571,9 @@ nav a:hover {
     box-shadow: #140606;
     opacity: 0.9;
     text-shadow: #140606;
-     text-shadow: 5px 4px 6px rgba(237, 68, 7, 0.774);
+    text-shadow: 5px 4px 6px rgba(237, 68, 7, 0.774);
 }
+
 /* text-shadow: 5px 4px 6px rgba(4, 8, 247, 0.774);*/
 .about-text p {
     margin-bottom: 20px;
@@ -575,8 +607,8 @@ nav a:hover {
 /* Menu Section */
 .menu {
     background-color: #07e659;
-   background-image: url('https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80');
-        
+    background-image: url('https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80');
+
     background-size: cover;
     background-position: center;
     padding: 80px 0;
@@ -595,7 +627,7 @@ nav a:hover {
     background-color: #91f40751;
     border-radius: 10px;
     overflow: hidden;
-   text-shadow: 3px 4px 6px rgba(246, 3, 3, 0.93);
+    text-shadow: 3px 4px 6px rgba(246, 3, 3, 0.93);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
     position: relative;
@@ -619,7 +651,7 @@ nav a:hover {
 }
 
 .menu-item-image {
-    
+
     height: 290px;
     overflow: hidden;
 }
@@ -672,21 +704,21 @@ nav a:hover {
     color: var(--text);
     font-size: 0.99rem;
     margin-bottom: 20px;
-    
-   
+
+
 }
 
 /* Promotion Section */
 .promotion {
     margin: 20px;
     background:
-    url('https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1035&q=80');
+        url('https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1035&q=80');
     background-size: cover;
     background-position: center;
-    padding: 20px ;
+    padding: 20px;
     color: rgb(18, 2, 2);
     text-shadow: 3px 4px 6px rgba(246, 3, 3, 0.93);
-   border: #121212;
+    border: #121212;
     margin-bottom: 5px;
     border-radius: 10px;
 
@@ -694,7 +726,7 @@ nav a:hover {
 
 
 
-.promotion h3  {
+.promotion h3 {
     padding: 5px;
     width: 100%;
     background-color: #25d3aa9f;
@@ -703,16 +735,16 @@ nav a:hover {
 }
 
 .promotion p {
-  
+
     padding: 10px;
     background-color: #25d3aa9f;
     font-size: 1.2rem;
     max-width: 800px;
     margin: 0 auto 30px;
-  
+
 }
 
-.promocao{
+.promocao {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -721,19 +753,19 @@ nav a:hover {
     padding: 10px;
     font-size: 1.5rem;
     border-radius: 5px;
-   
+
 }
 
-.pizza-media{
+.pizza-media {
     border-radius: 5px;
 
 }
 
-.emergencia{
-   text-shadow: 3px 4px 6px rgba(246, 3, 3, 0.93);
-   padding: 10px;
-   font-size: 1.2rem;
-   border-radius: 5px;
+.emergencia {
+    text-shadow: 3px 4px 6px rgba(246, 3, 3, 0.93);
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 5px;
 }
 
 /* Contact Section */
@@ -742,7 +774,7 @@ nav a:hover {
         url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1200&q=80');
     background-size: cover;
     background-position: center;
-    background: 
+    background:
         url('https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=1200&q=80');
     background-size: cover;
     background-position: center;
@@ -791,42 +823,50 @@ nav a:hover {
 /* Estilização básica do botão de ação */
 .btn-adicionar-pedido {
     display: inline-block;
-    background-color: #388E3C; /* Exemplo de cor verde (Ação) */
+    background-color: #388E3C;
+    /* Exemplo de cor verde (Ação) */
     color: white;
     padding: 8px 15px;
     border-radius: 4px;
-    text-decoration: none; /* Remove o sublinhado padrão do link */
+    text-decoration: none;
+    /* Remove o sublinhado padrão do link */
     font-weight: bold;
     text-align: center;
-    margin-top: 10px; /* Adiciona um espaço abaixo da descrição */
+    margin-top: 10px;
+    /* Adiciona um espaço abaixo da descrição */
     transition: background-color 0.3s;
 }
 
 .btn-adicionar-pedido:hover {
-    background-color: #2E7D32; /* Um tom mais escuro ao passar o mouse */
+    background-color: #2E7D32;
+    /* Um tom mais escuro ao passar o mouse */
 }
 
 /* Estilização para alinhar os botões Grande e Média lado a lado */
 
 .menu-item-actions {
-    display: flex;             /* 1. Ativa o layout flexível */
-    gap: 10px;                 /* 2. Adiciona um espaçamento de 10px entre os botões */
-    margin-top: 15px;
-    justify-content: space-between; /* 3. Garante espaço entre os botões (opcional, pode ser 'center' ou 'space-around') */
+    display: flex;
+    /* 1. Ativa o layout flexível */
+    gap: 10px;
+    /* 2. Adiciona um espaçamento de 10px entre os botões */
+    margin-top: 20px;
+    justify-content: center;
+    padding: 15px;
 }
 
 .btn-adicionar-pedido {
     /* 4. Faz com que os botões dividam o espaço igualmente */
-    flex-grow: 1; 
+    flex-grow: 1;
     /* Mantenha suas outras regras de estilo de botão aqui (cor, padding, etc.) */
-    padding: 10px 5px; 
+    padding: 10px 5px;
     text-align: center;
     font-size: 14px;
 }
 
 /* Container do botão para controle de alinhamento */
 .menu-item-actions {
-    text-align: right; /* Opcional: Alinha o botão à direita do card */
+    text-align: right;
+    /* Opcional: Alinha o botão à direita do card */
     margin-top: 10px;
 }
 
@@ -891,7 +931,8 @@ nav a:hover {
     margin-bottom: 15px;
 }
 
-.container-promotion, .container-atendimento {
+.container-promotion,
+.container-atendimento {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -947,7 +988,7 @@ footer {
     color: #19f605;
     text-decoration: none;
     transition: color 0.3s ease;
-    text-shadow: #d41313  2px 0px 0px;
+    text-shadow: #d41313 2px 0px 0px;
 }
 
 .footer-links a:hover {
@@ -986,6 +1027,46 @@ footer {
     color: #aaa;
 }
 
+
+/* Ajuste do Botão de Remover Item (X) no Carrinho */
+.btn-remover {
+    background-color: #ff4444 !important;
+    color: white !important;
+    border: none !important;
+    
+    /* TAMANHO FIXO: O segredo para ele não esticar */
+    width: 24px !important;
+    height: 24px !important;
+    
+    /* ALINHAMENTO DO "X" */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    font-size: 12px !important; /* Tamanho do X */
+    font-weight: bold !important;
+    
+    /* ESPAÇAMENTO */
+    margin-left: 10px !important; /* Afasta do preço/texto */
+    padding: 0 !important;        /* Remove qualquer padding que o esteja inchando */
+    transition: background 0.3s !important;
+}
+
+.btn-remover:hover {
+    background-color: #cc0000 !important;
+}
+
+/* Garante que o item do carrinho não fique apertado */
+.item-carrinho {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 10px 5px !important;
+    border-bottom: 1px solid #eee !important;
+}
+
 @media (max-width: 992px) {
     .about-content {
         flex-direction: column;
@@ -1014,6 +1095,7 @@ footer {
     .contact-grid {
         grid-template-columns: 1fr;
     }
+
     .hero {
         height: auto;
     }
@@ -1092,7 +1174,7 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .botao-link{
+    .botao-link {
         width: 80%;
     }
 
