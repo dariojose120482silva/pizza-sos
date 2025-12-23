@@ -17,7 +17,7 @@
 /* Título "Seu Carrinho" dentro do formulário */
 .form-carrinho  {
     text-align: center !important;
-    color: #f7a605 !important; /* Laranja/Amarelo */
+    color: #0a0a0a !important; /* Laranja/Amarelo */
     margin-bottom: 25px !important;
     font-size: 1.8rem !important;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
@@ -190,14 +190,15 @@ html {
 
 
 body {
-    background-image: url('https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+   
+    /*background-image: url('https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');
     background-size: cover;
     background-position: center;
     /* Centraliza a imagem de fundo */
-    background-position: center;
+    /*background-position: center;*/
 
     /* Evita que a imagem se repita */
-    background-repeat: no-repeat;
+    /*background-repeat: no-repeat;*/
 
     /* Faz a imagem cobrir todo o espaço do contêiner */
     background-size: cover;
@@ -205,7 +206,7 @@ body {
     /* Opcional: Adiciona um pouco de preenchimento para o texto não ficar colado nas bordas */
     padding: 60px 20px;
 
-    background-color: var(--light);
+    background-color: #f9eec9;
     color: var(--text);
     line-height: 1.6;
     padding-top: 120px;
@@ -478,13 +479,13 @@ nav a:hover {
 /* About Section */
 .about {
 
-    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9)),
+    /*background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9)),
         url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80');
     background-size: cover;
     background-position: center;
-    background-image: url('https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80');
+    background-image: url('https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80');*/
     padding: 80px 0;
-    background-color: var(--section-bg);
+    background-color: #e0c18b;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     margin-bottom: 50px;
@@ -606,13 +607,13 @@ nav a:hover {
 
 /* Menu Section */
 .menu {
-    background-color: #07e659;
-    background-image: url('https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80');
+    /*background-color: #07e659;
+    background-image: url('https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80');*/
 
     background-size: cover;
     background-position: center;
     padding: 80px 0;
-    background-color: var(--light);
+    background-color: #90a74c7f;
     border-radius: 10px;
     margin-bottom: 50px;
 }
@@ -770,7 +771,7 @@ nav a:hover {
 
 /* Contact Section */
 .contact {
-    background:
+    /*background:
         url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1200&q=80');
     background-size: cover;
     background-position: center;
@@ -778,9 +779,9 @@ nav a:hover {
         url('https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=1200&q=80');
     background-size: cover;
     background-position: center;
-    background-image: url('https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+    background-image: url('https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');*/
     padding: 80px 0;
-    background-color: white;
+    background-color: #58483a6f;
     border-radius: 10px;
     margin-bottom: 50px;
 }
@@ -945,7 +946,7 @@ footer {
     background-color: var(--body-bg);
     color: rgb(208, 214, 32);
     padding: 50px 0 20px;
-    box-shadow: 0 -5px 15px rgba(243, 5, 5, 0.748);
+    box-shadow: 0 -5px 15px rgba(244, 4, 4, 0.748);
     border-radius: 8px;
 }
 
