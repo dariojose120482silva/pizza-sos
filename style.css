@@ -553,9 +553,9 @@ nav a:hover {
 }
 
 .s-o-s {
-    color: #f1f105e4;
+    color: #07fb13;
     font-weight: bold;
-    text-shadow: 3px 4px 6px rgba(244, 64, 64, 0.986);
+    text-shadow: 3px 4px 6px rgba(14, 2, 2, 0.986);
 }
 
 .about-text h3 {
@@ -862,6 +862,10 @@ nav a:hover {
     padding: 10px 5px;
     text-align: center;
     font-size: 14px;
+}
+
+.menu-mista {
+    display: none;
 }
 
 /* Container do botão para controle de alinhamento */
