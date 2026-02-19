@@ -1552,6 +1552,25 @@ footer {
     }
 }
 
+@media (max-width: 480px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-item-description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--text);
+    font-size: 0.9rem;
+    }
+}
+
 @media (max-width: 550px) {
     #pedido {
         padding: 18px 8px;
