@@ -107,3 +107,36 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Seleção dos elementos
+    const btnIr = document.getElementById('btn-ir-misto'); // Você deve criar esse botão no HTML tradicional
+    const btnVoltar = document.getElementById('btn-voltar-tradicional');
+    
+    const menuOriginal = document.querySelector('#menu .menu-grid');
+    const secaoMista = document.getElementById('secao-mista');
+    const tituloOriginal = document.querySelector('#menu .section-title');
+
+    // Função para IR para o cardápio misto
+    if(btnIr) {
+        btnIr.addEventListener('click', function() {
+            menuOriginal.style.display = 'none';
+            tituloOriginal.style.display = 'none';
+            btnIr.parentElement.style.display = 'none'; // Esconde a div do botão de ida
+            
+            secaoMista.style.display = 'block';
+            window.scrollTo({ top: document.getElementById('menu').offsetTop, behavior: 'smooth' });
+        });
+    }
+
+    // Função para VOLTAR para o tradicional
+    btnVoltar.addEventListener('click', function() {
+        secaoMista.style.display = 'none';
+        
+        menuOriginal.style.display = 'grid';
+        tituloOriginal.style.display = 'block';
+        if(btnIr) btnIr.parentElement.style.display = 'block';
+        
+        window.scrollTo({ top: document.getElementById('menu').offsetTop, behavior: 'smooth' });
+    });
+});

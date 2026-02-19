@@ -6,9 +6,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Secular+One&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Secular+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
     <title>S.O.S Pizza - Delivery Emergencial 18:00 as 21:00 HORAS</title>
+    <link rel="shortcut icon" href="./img/favicon-logo.png" type="image/x-icon" style="width: 150%; height: 150%;">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="responcivo.css">
     <link rel="stylesheet" href="style.css">
@@ -22,8 +23,10 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <i class="fas fa-pizza-slice"></i>
                     <div>
+                        <img src="./img/favicon-logo.png" alt="">
+                    </div>
+                    <div class="sos-pizza">
                         <h1>S.O.S Pizza</h1>
                         <span class="span-delivery">Delivery Emergencial Quatas, Sábados e Domigos apartir das (18:00 as
                             21:00 HORAS).</span>
@@ -129,6 +132,13 @@
     <section id="menu" class="menu">
         <div class="container">
             <h2 class="section-title">Cardápio de Emergência</h2>
+
+            <div id="wrapper-btn-ir">
+                <button id="btn-ir-misto" class="button-ir-misto">
+                    <i class="fas fa-arrows-alt-h"></i> Ver Pizzas Mistas
+                </button>
+
+            </div>
             <div class="menu-grid">
 
                 <div class="menu-item">
@@ -139,22 +149,26 @@
                     <div class="menu-item-content">
                         <div class="menu-item-header">
                             <h3 class="menu-item-name">MUÇARELA</h3>
-
                         </div>
-                        <p class="menu-item-description">Molho de tomate, muçarela orégano, tomate e azeitonas.</p>
-                        <div class="menu-item-actions">
-                            <a href="#" class="btn-adicionar-pedido btn-grande" data-pizza="MUÇARELA(GRANDE)"
-                                data-preco="37,00">
-                                Pizza Grande R$ 37,00
-                            </a>
+                        <div class="description-content">
+                            <p class="menu-item-description">Molho de tomate, muçarela orégano, tomate e azeitonas.</p>
+                            <div class="menu-item-actions">
+                                <a href="#" class="btn-adicionar-pedido btn-grande" data-pizza="MUÇARELA(GRANDE)"
+                                    data-preco="37,00">
+                                    Pizza Grande R$ 37,00
+                                </a>
 
-                            <a href="#" class="btn-adicionar-pedido btn-media" data-pizza="MUÇARELA (MÉDIA)"
-                                data-preco="27,00">
-                                Pizza Média R$ 27,00
-                            </a>
+                                <a href="#" class="btn-adicionar-pedido btn-media" data-pizza="MUÇARELA (MÉDIA)"
+                                    data-preco="27,00">
+                                    Pizza Média R$ 27,00
+                                </a>
+
+                            </div>
                         </div>
                     </div>
                 </div>
+
+
                 <div class="menu-item">
                     <div class="menu-item-badge">PLANTÃO 18:00 as 21:00 HORAS</div>
                     <div class="menu-item-image">
@@ -163,20 +177,21 @@
                     <div class="menu-item-content">
                         <div class="menu-item-header">
                             <h3 class="menu-item-name">CALABRESA</h3>
-
                         </div>
-                        <p class="menu-item-description">Molho de tomate, muçarela e calabresa, cebola, orégano e
-                            azeitonas.</p>
-                        <div class="menu-item-actions">
-                            <a href="#" class="btn-adicionar-pedido btn-grande" data-pizza="CALABRESA (GRANDE)"
-                                data-preco="39,00">
-                                Pizza Grande R$ 39,00
-                            </a>
+                        <div class="description-content">
+                            <p class="menu-item-description">Molho de tomate, muçarela e calabresa, cebola, orégano e
+                                azeitonas.</p>
+                            <div class="menu-item-actions">
+                                <a href="#" class="btn-adicionar-pedido btn-grande" data-pizza="CALABRESA (GRANDE)"
+                                    data-preco="39,00">
+                                    Pizza Grande R$ 39,00
+                                </a>
 
-                            <a href="#" class="btn-adicionar-pedido btn-media" data-pizza="CALABRESA (MÉDIA)"
-                                data-preco="29,00">
-                                Pizza Média R$ 29,00
-                            </a>
+                                <a href="#" class="btn-adicionar-pedido btn-media" data-pizza="CALABRESA (MÉDIA)"
+                                    data-preco="29,00">
+                                    Pizza Média R$ 29,00
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -190,18 +205,20 @@
                             <h3 class="menu-item-name">PORTUGUESA</h3>
 
                         </div>
-                        <p class="menu-item-description">Molho de tomate, muçarela, presunto, pimentão fatiado, ovos
-                            cozidos, orégano e azeitonas.</p>
-                        <div class="menu-item-actions">
-                            <a href="#" class="btn-adicionar-pedido btn-grande" data-pizza="PORTUGUESA (GRANDE)"
-                                data-preco="42,00">
-                                Pizza Grande R$ 42,00
-                            </a>
+                        <div class="description-content">
+                            <p class="menu-item-description">Molho de tomate, muçarela, presunto, pimentão fatiado, ovos
+                                cozidos, orégano e azeitonas.</p>
+                            <div class="menu-item-actions">
+                                <a href="#" class="btn-adicionar-pedido btn-grande" data-pizza="PORTUGUESA (GRANDE)"
+                                    data-preco="42,00">
+                                    Pizza Grande R$ 42,00
+                                </a>
 
-                            <a href="#" class="btn-adicionar-pedido btn-media" data-pizza="PORTUGUESA (MÉDIA)"
-                                data-preco="32,00">
-                                Pizza Média R$ 32,00
-                            </a>
+                                <a href="#" class="btn-adicionar-pedido btn-media" data-pizza="PORTUGUESA (MÉDIA)"
+                                    data-preco="32,00">
+                                    Pizza Média R$ 32,00
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -215,18 +232,21 @@
                             <h3 class="menu-item-name">FRANGO</h3>
 
                         </div>
-                        <p class="menu-item-description">Molho de tomate, muçarela, frango, milho, orégano e azeitonas.
-                        </p>
-                        <div class="menu-item-actions">
-                            <a href="#" class="btn-adicionar-pedido btn-grande" data-pizza="FRANGO (GRANDE)"
-                                data-preco="42,00">
-                                Pizza Grande R$ 42,00
-                            </a>
+                        <div class="p-3 description-content">
+                            <p class="menu-item-description">Molho de tomate, muçarela, frango, milho, orégano e
+                                azeitonas.
+                            </p>
+                            <div class="menu-item-actions">
+                                <a href="#" class="btn-adicionar-pedido btn-grande" data-pizza="FRANGO (GRANDE)"
+                                    data-preco="42,00">
+                                    Pizza Grande R$ 42,00
+                                </a>
 
-                            <a href="#" class="btn-adicionar-pedido btn-media" data-pizza="FRANGO (MÉDIA)"
-                                data-preco="32,00">
-                                Pizza Média R$ 32,00
-                            </a>
+                                <a href="#" class="btn-adicionar-pedido btn-media" data-pizza="FRANGO (MÉDIA)"
+                                    data-preco="32,00">
+                                    Pizza Média R$ 32,00
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -241,20 +261,415 @@
                             <h3 class="menu-item-name">Bolonhesa</h3>
 
                         </div>
-                        <p class="menu-item-description">Molho de tomate, carne moida, muçarela, cebola e azeitonas.
-                        </p>
-                        <div class="menu-item-actions">
-                            <a href="#" class="btn-adicionar-pedido btn-grande" data-pizza="FRANGO (GRANDE)"
-                                data-preco="45,00">
-                                Pizza Grande R$ 45,00
-                            </a>
+                        <div class="description-content">
+                            <p class="p-4 menu-item-description">Molho de tomate, carne moida, muçarela, cebola e
+                                azeitonas.
+                            </p>
+                            <div class="menu-item-actions">
+                                <a href="#" class="btn-adicionar-pedido btn-grande" data-pizza="FRANGO (GRANDE)"
+                                    data-preco="45,00">
+                                    Pizza Grande R$ 45,00
+                                </a>
 
-                            <a href="#" class="btn-adicionar-pedido btn-media" data-pizza="FRANGO (MÉDIA)"
-                                data-preco="35,00">
-                                Pizza Média R$ 35,00
-                            </a>
+                                <a href="#" class="btn-adicionar-pedido btn-media" data-pizza="FRANGO (MÉDIA)"
+                                    data-preco="35,00">
+                                    Pizza Média R$ 35,00
+                                </a>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div id="secao-mista" style="display: none; padding-top: 20px;">
+                <h2 class="section-title">Pizzas Mistas (Meio a Meio)</h2>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="./img/mussarela-x-calabresa.jpg" alt="Pizza Mussarela e Calabresa">
+                        </div>
+                        <div class="menu-item-badge">MIX MUSSARELA</div>
+                        <div class="menu-item-content">
+                            <h3 class="menu-name">MUSSARELA / CALABRESA</h3>
+                            <div class="description">
+                                <p class="p_1 menu-description">Metade calabresa e metade muçarela.</p>
+                                <div class="menu-item-actions">
+                                    <a href="#" class="btn-adicionar-pedido btn-grande" data-pizza="MISTA (CALA/MUSS) G"
+                                        data-preco="40,00">Grande R$ 40,00</a>
+                                    <a href="#" class="btn-adicionar-pedido btn-media" data-pizza="MISTA (CALA/MUSS) M"
+                                        data-preco="30,00">Média R$ 30,00</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="./img/mussarela-x-portuguesa.jpg" alt="Pizza Mussarela e Portuguesa">
+                        </div>
+                        <div class="menu-item-badge">MIX MUSSARELA</div>
+                        <div class="menu-item-content">
+                            <h3 class="menu-name">MUSSARELA / PORTUGUESA</h3>
+                            <div class="description">
+                                <p class="p_2 menu-description">Metade muçarela e metade portuguesa.</p>
+                                <div class="menu-item-actions">
+                                    <a href="#" class="btn-adicionar-pedido btn-grande" data-pizza="MISTA (MUSS/PORT) G"
+                                        data-preco="43,00">Grande R$ 43,00</a>
+                                    <a href="#" class="btn-adicionar-pedido btn-media" data-pizza="MISTA (MUSS/PORT) M"
+                                        data-preco="33,00">Média R$ 33,00</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="./img/mussarela-x-frango.jpg" alt="Pizza Mussarela e Frango">
+                        </div>
+                        <div class="menu-item-badge">MIX MUSSARELA</div>
+                        <div class="menu-item-content">
+                            <h3 class="menu-name">MUSSARELA / FRANGO</h3>
+                            <div class="description">
+                                <p class="p_3 menu-description">Metade muçarela e metade frango.</p>
+                                <div class="menu-item-actions">
+                                    <a href="#" class="btn-adicionar-pedido btn-grande" data-pizza="MISTA (MUSS/FRAN) G"
+                                        data-preco="43,00">Grande R$ 43,00</a>
+                                    <a href="#" class="btn-adicionar-pedido btn-media" data-pizza="MISTA (MUSS/FRAN) M"
+                                        data-preco="33,00">Média R$ 33,00</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="./img/mussarela-x-bolonhesa.png" alt="Pizza Mussarela e Bolonhesa">
+                        </div>
+                        <div class="menu-item-badge">MIX MUSSARELA</div>
+                        <div class="menu-item-content">
+                            <h3 class="menu-name">MUÇARELA / BOLONHESA</h3>
+                            <div class="description">
+                                <p class="p_4 menu-description">Metade muçarela e metade bolonhesa.</p>
+                                <div class="menu-item-actions">
+                                    <a href="#" class="btn-adicionar-pedido btn-grande" data-pizza="MISTA (MUSS/BOLO) G"
+                                        data-preco="42,00">Grande R$ 42,00</a>
+                                    <a href="#" class="btn-adicionar-pedido btn-media" data-pizza="MISTA (MUSS/BOLO) M"
+                                        data-preco="32,00">Média R$ 32,00</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="./img/calabresa-x-mssarela.jpg" alt="Pizza Calabresa e Mussarela">
+                        </div>
+                        <div class="menu-item-badge">MIX CALABRESA</div>
+                        <div class="menu-item-content">
+                            <h3 class="menu-name">CALABRESA / MUSSARELA</h3>
+                            <div class="description">
+                                <p class="p_5 menu-description">Metade calabresa e metade muçarela.</p>
+                                <div class="menu-item-actions">
+                                    <a href="#" class="btn-adicionar-pedido btn-grande" data-pizza="MISTA (CALA/MUSS) G"
+                                        data-preco="40,00">Grande R$ 40,00</a>
+                                    <a href="#" class="btn-adicionar-pedido btn-media" data-pizza="MISTA (CALA/MUSS) M"
+                                        data-preco="30,00">Média R$ 30,00</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="./img/calabresa-x-portuguesa.jpg" alt="Pizza Calabresa e Portuguesa">
+                        </div>
+                        <div class="menu-item-badge">MIX CALABRESA</div>
+                        <div class="menu-item-content">
+                            <h3 class="menu-name">CALABRESA / PORTUGUESA</h3>
+                            <div class="description">
+                                <p class="p_6 menu-description">Metade calabresa e metade portuguesa.</p>
+                                <div class="menu-item-actions">
+                                    <a href="#" class="btn-adicionar-pedido btn-grande" data-pizza="MISTA (CALA/PORT) G"
+                                        data-preco="43,00">Grande R$ 43,00</a>
+                                    <a href="#" class="btn-adicionar-pedido btn-media" data-pizza="MISTA (CALA/PORT) M"
+                                        data-preco="33,00">Média R$ 33,00</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="./img/calabresa-x-frango.jpg" alt="Pizza Calabresa e Frango">
+                        </div>
+                        <div class="menu-item-badge">MIX CALABRESA</div>
+                        <div class="menu-item-content">
+                            <h3 class="menu-name">CALABRESA / FRANGO</h3>
+                            <div class="description">
+                                <p class="p_7 menu-description">Metade calabresa e metade frango.</p>
+                                <div class="menu-item-actions">
+                                    <a href="#" class="btn-adicionar-pedido btn-grande" data-pizza="MISTA (CALA/FRAN) G"
+                                        data-preco="43,00">Grande R$ 43,00</a>
+                                    <a href="#" class="btn-adicionar-pedido btn-media" data-pizza="MISTA (CALA/FRAN) M"
+                                        data-preco="33,00">Média R$ 33,00</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="./img/calabresa-x-bolonhesa.png" alt="Pizza Calabresa e Bolonhesa">
+                        </div>
+                        <div class="menu-item-badge">MIX CALABRESA</div>
+                        <div class="menu-item-content">
+                            <h3 class="menu-name">CALABRESA / BOLONHESA</h3>
+                            <div class="description">
+                                <p class="p_8 menu-description">Metade calabresa e metade bolonhesa.</p>
+                                <div class="menu-item-actions">
+                                    <a href="#" class="btn-adicionar-pedido btn-grande" data-pizza="MISTA (CALA/BOLO) G"
+                                        data-preco="45,00">Grande R$ 45,00</a>
+                                    <a href="#" class="btn-adicionar-pedido btn-media" data-pizza="MISTA (CALA/BOLO) M"
+                                        data-preco="35,00">Média R$ 35,00</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="./img/portuguesa-x-mussarela.jpg" alt="Pizza Portuguesa e Mussarela">
+                        </div>
+                        <div class="menu-item-badge">MIX PORTUGUESA</div>
+                        <div class="menu-item-content">
+                            <h3 class="menu-name">PORTUGUESA / MUSSARELA</h3>
+                            <div class="description">
+                                <p class="p_9 menu-description">Metade portuguesa e metade muçarela.</p>
+                                <div class="menu-item-actions">
+                                    <a href="#" class="btn-adicionar-pedido btn-grande" data-pizza="MISTA (PORT/MUSS) G"
+                                        data-preco="42,00">Grande R$ 42,00</a>
+                                    <a href="#" class="btn-adicionar-pedido btn-media" data-pizza="MISTA (PORT/MUSS) M"
+                                        data-preco="32,00">Média R$ 32,00</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="./img/portuguesa-x-calabresa.jpg" alt="Pizza Portuguesa e Calabresa">
+                        </div>
+                        <div class="menu-item-badge">MIX PORTUGUESA</div>
+                        <div class="menu-item-content">
+                            <h3 class="menu-name">PORTUGUESA / CALABRESA</h3>
+                            <div class="description">
+                                <p class="p_10 menu-description">Metade portuguesa e metade calabresa.</p>
+                                <div class="menu-item-actions">
+                                    <a href="#" class="btn-adicionar-pedido btn-grande" data-pizza="MISTA (PORT/CALA) G"
+                                        data-preco="43,00">Grande R$ 43,00</a>
+                                    <a href="#" class="btn-adicionar-pedido btn-media" data-pizza="MISTA (PORT/CALA) M"
+                                        data-preco="33,00">Média R$ 33,00</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="./img/portuguesa-x-frango.jpg" alt="Pizza Portuguesa e Frango">
+                        </div>
+                        <div class="menu-item-badge">MIX PORTUGUESA</div>
+                        <div class="menu-item-content">
+                            <h3 class="menu-name">PORTUGUESA / FRANGO</h3>
+                            <div class="description">
+                                <p class="p_11 menu-description">Metade portuguesa e metade frango.</p>
+                                <div class="menu-item-actions">
+                                    <a href="#" class="btn-adicionar-pedido btn-grande" data-pizza="MISTA (PORT/FRAN) G"
+                                        data-preco="42,00">Grande R$ 42,00</a>
+                                    <a href="#" class="btn-adicionar-pedido btn-media" data-pizza="MISTA (PORT/FRAN) M"
+                                        data-preco="32,00">Média R$ 32,00</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="./img/portuguesa-x-bolonhesa.png" alt="Pizza Portuguesa e Bolonhesa">
+                        </div>
+                        <div class="menu-item-badge">MIX PORTUGUESA</div>
+                        <div class="menu-item-content">
+                            <h3 class="menu-name">PORTUGUESA / BOLONHESA</h3>
+                            <div class="description">
+                                <p class="p_12 menu-description">Metade portuguesa e metade bolonhesa.</p>
+                                <div class="menu-item-actions">
+                                    <a href="#" class="btn-adicionar-pedido btn-grande" data-pizza="MISTA (PORT/BOLO) G"
+                                        data-preco="45,00">Grande R$ 45,00</a>
+                                    <a href="#" class="btn-adicionar-pedido btn-media" data-pizza="MISTA (PORT/BOLO) M"
+                                        data-preco="35,00">Média R$ 35,00</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="./img/frango-x-mussarela.jpg" alt="Pizza Frango e Mussarela">
+                        </div>
+                        <div class="menu-item-badge">MIX FRANGO</div>
+                        <div class="menu-item-content">
+                            <h3 class="menu-name">FRANGO / MUSSARELA</h3>
+                            <div class="description">
+                                <p class="p_13 menu-description">Metade frango e metade muçarela.</p>
+                                <div class="menu-item-actions">
+                                    <a href="#" class="btn-adicionar-pedido btn-grande" data-pizza="MISTA (FRAN/MUSS) G"
+                                        data-preco="40,00">Grande R$ 40,00</a>
+                                    <a href="#" class="btn-adicionar-pedido btn-media" data-pizza="MISTA (FRAN/MUSS) M"
+                                        data-preco="30,00">Média R$ 30,00</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="./img/frango-x-calabresa.jpg" alt="Pizza Frango e Calabresa">
+                        </div>
+                        <div class="menu-item-badge">MIX FRANGO</div>
+                        <div class="menu-item-content">
+                            <h3 class="menu-name">FRANGO / CALABRESA</h3>
+                            <div class="description">
+                                <p class="p_14 menu-description">Metade frango e metade calabresa.</p>
+                                <div class="menu-item-actions">
+                                    <a href="#" class="btn-adicionar-pedido btn-grande" data-pizza="MISTA (FRAN/CALA) G"
+                                        data-preco="43,00">Grande R$ 43,00</a>
+                                    <a href="#" class="btn-adicionar-pedido btn-media" data-pizza="MISTA (FRAN/CALA) M"
+                                        data-preco="33,00">Média R$ 33,00</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="./img/frango-x-portuguesa.jpg" alt="Pizza Frango e Portuguesa">
+                        </div>
+                        <div class="menu-item-badge">MIX FRANGO</div>
+                        <div class="menu-item-content">
+                            <h3 class="menu-name">FRANGO / PORTUGUESA</h3>
+                            <div class="description">
+                                <p class="p_15 menu-description">Metade frango e metade portuguesa.</p>
+                                <div class="menu-item-actions">
+                                    <a href="#" class="btn-adicionar-pedido btn-grande" data-pizza="MISTA (FRAN/PORT) G"
+                                        data-preco="43,00">Grande R$ 43,00</a>
+                                    <a href="#" class="btn-adicionar-pedido btn-media" data-pizza="MISTA (FRAN/PORT) M"
+                                        data-preco="33,00">Média R$ 33,00</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="./img/frango-x-bolonhesa.png" alt="Pizza Frango e Bolonhesa">
+                        </div>
+                        <div class="menu-item-badge">MIX FRANGO</div>
+                        <div class="menu-item-content">
+                            <h3 class="menu-name">FRANGO / BOLONHESA</h3>
+                            <div class="description">
+                                <p class="p_16 menu-description">Metade frango e metade bolonhesa.</p>
+                                <div class="menu-item-actions">
+                                    <a href="#" class="btn-adicionar-pedido btn-grande" data-pizza="MISTA (FRAN/BOLO) G"
+                                        data-preco="42,00">Grande R$ 42,00</a>
+                                    <a href="#" class="btn-adicionar-pedido btn-media" data-pizza="MISTA (FRAN/BOLO) M"
+                                        data-preco="32,00">Média R$ 32,00</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="./img/bolonhesa-x-mussarela.png" alt="Pizza Bolonhesa e Mussarela">
+                        </div>
+                        <div class="menu-item-badge">MIX BOLONHESA</div>
+                        <div class="menu-item-content">
+                            <h3 class="menu-name">BOLONHESA / MUSSARELA</h3>
+                            <div class="description">
+                                <p class="p_17 menu-description">Metade bolonhesa e metade muçarela.</p>
+                                <div class="menu-item-actions">
+                                    <a href="#" class="btn-adicionar-pedido btn-grande" data-pizza="MISTA (BOLO/MUSS) G"
+                                        data-preco="42,00">Grande R$ 42,00</a>
+                                    <a href="#" class="btn-adicionar-pedido btn-media" data-pizza="MISTA (BOLO/MUSS) M"
+                                        data-preco="32,00">Média R$ 32,00</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="./img/bolonhesa-x-calabresa.png" alt="Pizza Bolonhesa e Calabresa">
+                        </div>
+                        <div class="menu-item-badge">MIX BOLONHESA</div>
+                        <div class="menu-item-content">
+                            <h3 class="menu-name">BOLONHESA / CALABRESA</h3>
+                            <div class="description">
+                                <p class="p_18 menu-description">Metade bolonhesa e metade calabresa.</p>
+                                <div class="menu-item-actions">
+                                    <a href="#" class="btn-adicionar-pedido btn-grande" data-pizza="MISTA (BOLO/CALA) G"
+                                        data-preco="45,00">Grande R$ 45,00</a>
+                                    <a href="#" class="btn-adicionar-pedido btn-media" data-pizza="MISTA (BOLO/CALA) M"
+                                        data-preco="35,00">Média R$ 35,00</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="./img/bolonhesa-x-portuguesa.png" alt="Pizza Bolonhesa e Portuguesa">
+                        </div>
+                        <div class="menu-item-badge">MIX BOLONHESA</div>
+                        <div class="menu-item-content">
+                            <h3 class="menu-name">BOLONHESA / PORTUGUESA</h3>
+                            <div class="description">
+                                <p class="p_19 menu-description">Metade bolonhesa e metade portuguesa.</p>
+                                <div class="menu-item-actions">
+                                    <a href="#" class="btn-adicionar-pedido btn-grande" data-pizza="MISTA (BOLO/PORT) G"
+                                        data-preco="42,00">Grande R$ 42,00</a>
+                                    <a href="#" class="btn-adicionar-pedido btn-media" data-pizza="MISTA (BOLO/PORT) M"
+                                        data-preco="32,00">Média R$ 32,00</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="./img/bolonhesa-x-frango.png" alt="Pizza Bolonhesa e Frango">
+                        </div>
+                        <div class="menu-item-badge">MIX BOLONHESA</div>
+                        <div class="menu-item-content">
+                            <h3 class="menu-name">BOLONHESA / FRANGO</h3>
+                            <div class="description">
+                                <p class="p_20 menu-description">Metade bolonhesa e metade frango.</p>
+                                <div class="menu-item-actions">
+                                    <a href="#" class="btn-adicionar-pedido btn-grande" data-pizza="MISTA (BOLO/FRAN) G"
+                                        data-preco="45,00">Grande R$ 45,00</a>
+                                    <a href="#" class="btn-adicionar-pedido btn-media" data-pizza="MISTA (BOLO/FRAN) M"
+                                        data-preco="35,00">Média R$ 35,00</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <button id="btn-voltar-tradicional" class="button-voltar-tradicional">
+                        <i class="fas fa-undo"></i> Voltar ao Cardápio Tradicional
+                    </button>
                 </div>
             </div>
         </div>
