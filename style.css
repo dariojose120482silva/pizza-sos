@@ -458,15 +458,14 @@ nav a:hover {
 }
 
 .botao-link {
-    background-color: #07fb13;
+    background-color: #06fa12;
     color: #07e659;
     padding: 10px;
     width: 50%;
     border-radius: 8px;
     border: none;
     transition: transform 0.5s, box-shadow 0.6s;
-    font-size: large;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1rem;
 }
 
 .botao-link:hover {
@@ -559,10 +558,30 @@ nav a:hover {
     /* Amarelo para destaque */
     position: relative;
     color: #0b0808;
-    text-shadow: 3px 4px 6px rgba(249, 49, 9, 0.808);
+    text-shadow: 3px 4px 6px #f60303ce;
     font-size: 2.2rem;
     font-weight: bold;
 }
+
+
+/* Estilização do aviso */
+.aviso-misto {
+    display: block;       /* Garante que ele comece visível */
+    text-align: center;   /* Centraliza o texto */
+    margin-top: 10px;     /* Espaço em relação ao título H2 */
+    margin-bottom: 20px;  /* Espaço em relação ao botão abaixo */
+    color: #090909;       /* Uma cor de destaque (Laranja) */
+    font-weight: bold;    /* Deixa o texto em negrito */
+    font-size: 0.95rem;   /* Tamanho da fonte levemente menor que o padrão */
+}
+
+/* Opcional: Efeito suave quando o aviso aparecer/sumir */
+.aviso-misto {
+    transition: opacity 0.3s ease;
+}
+
+
+
 
 .section-title-central {
     text-align: center;
@@ -1182,8 +1201,9 @@ footer {
     border-bottom: 1px solid #eee !important;
 }
 
-@media (max-width: 992px) {
-    .about-content {
+
+@media (max-width: 1200px) {
+       .about-content {
         flex-direction: column;
     }
 
@@ -1199,24 +1219,28 @@ footer {
         font-size: 1.8rem;
     }
 
- .description {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza os filhos horizontalmente */
-    width: 100%;
-}
+    .description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Centraliza os filhos horizontalmente */
+        width: 100%;
+    }
 
     /* Use o nome exato da classe que está no seu HTML */
-.menu-item-description {
-    display: block; /* Parágrafo não precisa ser flex para centralizar texto */
-    text-align: center;
-    color: var(--text);
-    font-size: 0.9rem;
-    font-weight: 700;
-    max-width: 350px;
-    margin: 0.4rem auto 0 auto; /* O 'auto' nas laterais centraliza o bloco */
-    width: 100%; /* Garante que ele ocupe o espaço disponível até o max-width */
-}
+    .menu-item-description {
+        display: block;
+        /* Parágrafo não precisa ser flex para centralizar texto */
+        text-align: center;
+        color: var(--text);
+        font-size: 0.9rem;
+        font-weight: 700;
+        max-width: 350px;
+        margin: 0.4rem auto 0 auto;
+        /* O 'auto' nas laterais centraliza o bloco */
+        width: 100%;
+        /* Garante que ele ocupe o espaço disponível até o max-width */
+    }
 
 
     .button-ir-misto {
@@ -1231,7 +1255,7 @@ footer {
         background-color: #e6a307;
         display: block;
         padding: 10px;
-        width: 20%;
+        width: 50%;
         border-radius: 8px;
         border: none;
         transition: transform 0.5s, box-shadow 0.1s;
@@ -1254,7 +1278,7 @@ footer {
         display: block;
 
         padding: 10px;
-        width: 20%;
+        width: 50%;
         border-radius: 8px;
         border: none;
         transition: transform 0.5s, box-shadow 0.1s;
@@ -1293,6 +1317,134 @@ footer {
 
 }
 
+
+@media (max-width: 992px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .hero h2 {
+        font-size: 2.4rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Centraliza os filhos horizontalmente */
+        width: 100%;
+    }
+
+    .description-content {
+        background-color: #ecac0a;
+        border-radius: 8px;
+        padding: 0.2;
+        text-wrap: balance;
+        width: 100%;
+        ;
+    }
+
+
+    /* Use o nome exato da classe que está no seu HTML */
+    .menu-item-description {
+        display: block;
+        /* Parágrafo não precisa ser flex para centralizar texto */
+        text-align: center;
+        color: var(--text);
+        font-size: 0.9rem;
+        font-weight: 700;
+        max-width: 350px;
+        margin: 0.4rem auto 0 auto;
+        /* O 'auto' nas laterais centraliza o bloco */
+        width: 100%;
+        /* Garante que ele ocupe o espaço disponível até o max-width */
+    }
+
+
+    .button-ir-misto {
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .button-ir-misto {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin: 2.5rem auto 3rem;
+        background-color: #e6a307;
+        display: block;
+        padding: 10px;
+        width: 50%;
+        border-radius: 8px;
+        border: none;
+        transition: transform 0.5s, box-shadow 0.1s;
+    }
+
+
+    .button-ir-misto:hover {
+        background-color: #fb8507;
+        transform: translateY(-3px);
+    }
+
+    .button-voltar-tradicional {
+
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+
+        margin: 4rem auto 4.9rem;
+        background-color: #e6a307;
+        display: block;
+
+        padding: 10px;
+        width: 50%;
+        border-radius: 8px;
+        border: none;
+        transition: transform 0.5s, box-shadow 0.1s;
+    }
+
+    .button-voltar-tradicional:hover {
+        background-color: #fb8507;
+        transform: translateY(-3px);
+    }
+
+
+    .p_1,
+    .p_2,
+    .p_3 .p_4,
+    .p_5,
+    .p_6,
+    .p_7,
+    .p_8,
+    .p_ .p_10,
+    .p_11,
+    .p_12,
+    .p_13,
+    .p_14,
+    .p_15 .p_16,
+    .p_17,
+    .p_18,
+    .p_19,
+    .p_20 {
+        display: flex;
+        font-size: 0.9rem;
+        margin-top: 0.2rem;
+        font-size: 1.0rem;
+        font-weight: 700;
+    }
+
+
+}
+
+
+
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;
@@ -1308,8 +1460,29 @@ footer {
         flex-direction: column;
     }
 
+
     .contact-grid {
-        grid-template-columns: 1fr;
+        display: grid !important; /* Garante que o grid esteja ativo */
+        grid-template-columns: 1fr 1fr;/* Força duas colunas iguais */
+        
+        gap: 15px; /* Espaçamento entre elas */
+        align-items: start; /* Alinha os itens pelo topo */
+    }
+
+    /* Garanta que os itens dentro do grid não forcem largura total */
+    .contact-grid > div, .contact-grid > section {
+        width: 100%;
+    }
+    .contact-grid > section {
+        width: 100%; 
+        max-width: 100%;
+    }
+
+   
+
+    .hero h2 {
+        font-size: 2.4rem
+    
     }
 
     .hero {
@@ -1317,50 +1490,53 @@ footer {
     }
 
 
- .description {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza os filhos horizontalmente */
-    width: 100%;
-}
+    .description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Centraliza os filhos horizontalmente */
+        width: 100%;
+    }
 
     /* Use o nome exato da classe que está no seu HTML */
-.menu-item-description {
-    display: block; /* Parágrafo não precisa ser flex para centralizar texto */
-    text-align: center;
-    color: var(--text);
-    font-size: 0.9rem;
-    font-weight: 700;
-    max-width: 450px;
-    margin: 0.4rem auto 0 auto; /* O 'auto' nas laterais centraliza o bloco */
-    width: 100%; /* Garante que ele ocupe o espaço disponível até o max-width */
-}
+    .menu-item-description {
+        display: block;
+        /* Parágrafo não precisa ser flex para centralizar texto */
+        text-align: center;
+        color: var(--text);
+        font-size: 0.9rem;
+        font-weight: 700;
+        max-width: 450px;
+        margin: 0.4rem auto 0 auto;
+        /* O 'auto' nas laterais centraliza o bloco */
+        width: 100%;
+        /* Garante que ele ocupe o espaço disponível até o max-width */
+    }
 
 
     .description-content {
-    background-color: #ecac0a;
-    border-radius: 8px;
-    padding: 0.2;
-    text-wrap: balance;
-    width: 100%;
-;
-}
+        background-color: #ecac0a;
+        border-radius: 8px;
+        padding: 0.2;
+        text-wrap: balance;
+        width: 100%;
+        ;
+    }
 
     .button-voltar-tradicional {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 80%;
-        margin-top: 3rem;
-        font-size: 0.8rem;
-        font-weight: 700;
+         border: none;
+        cursor: pointer;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 
-        text-align: center;
-        display: inline-block;
+        margin: 4rem auto 4.9rem;
         background-color: #e6a307;
-        color: #141514;
-        margin-top: auto;
-        margin-bottom: auto;
+        display: block;
+
+        padding: 10px;
+        width: 50%;
+        border-radius: 8px;
+        border: none;
+        transition: transform 0.5s, box-shadow 0.1s;
     }
 
     .button-tradicional {
@@ -1428,24 +1604,28 @@ footer {
 
 
 
-     .description {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza os filhos horizontalmente */
-    width: 100%;
-}
+    .description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Centraliza os filhos horizontalmente */
+        width: 100%;
+    }
 
     /* Use o nome exato da classe que está no seu HTML */
-.menu-item-description {
-    display: block; /* Parágrafo não precisa ser flex para centralizar texto */
-    text-align: center;
-    color: var(--text);
-    font-size: 0.9rem;
-    font-weight: 700;
-    max-width: 350px;
-    margin: 0.4rem auto 0 auto; /* O 'auto' nas laterais centraliza o bloco */
-    width: 100%; /* Garante que ele ocupe o espaço disponível até o max-width */
-}
+    .menu-item-description {
+        display: block;
+        /* Parágrafo não precisa ser flex para centralizar texto */
+        text-align: center;
+        color: var(--text);
+        font-size: 0.9rem;
+        font-weight: 700;
+        max-width: 350px;
+        margin: 0.4rem auto 0 auto;
+        /* O 'auto' nas laterais centraliza o bloco */
+        width: 100%;
+        /* Garante que ele ocupe o espaço disponível até o max-width */
+    }
 
 
 
@@ -1489,7 +1669,6 @@ footer {
     }
 
     .button-voltar-tradicional {
-
         border: none;
         cursor: pointer;
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
@@ -1548,7 +1727,7 @@ footer {
         margin-top: 0.2rem;
         font-size: 1.0rem;
         font-weight: 700;
-     
+
     }
 }
 
@@ -1562,12 +1741,12 @@ footer {
     }
 
     .menu-item-description {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--text);
-    font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: var(--text);
+        font-size: 0.9rem;
     }
 }
 
@@ -1622,24 +1801,28 @@ footer {
         grid-template-columns: 1fr;
     }
 
- .description {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza os filhos horizontalmente */
-    width: 100%;
-}
+    .description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Centraliza os filhos horizontalmente */
+        width: 100%;
+    }
 
     /* Use o nome exato da classe que está no seu HTML */
-.menu-item-description {
-    display: block; /* Parágrafo não precisa ser flex para centralizar texto */
-    text-align: center;
-    color: var(--text);
-    font-size: 0.9rem;
-    font-weight: 700;
-    max-width: 350px;
-    margin: 0.4rem auto 0 auto; /* O 'auto' nas laterais centraliza o bloco */
-    width: 100%; /* Garante que ele ocupe o espaço disponível até o max-width */
-}
+    .menu-item-description {
+        display: block;
+        /* Parágrafo não precisa ser flex para centralizar texto */
+        text-align: center;
+        color: var(--text);
+        font-size: 0.9rem;
+        font-weight: 700;
+        max-width: 350px;
+        margin: 0.4rem auto 0 auto;
+        /* O 'auto' nas laterais centraliza o bloco */
+        width: 100%;
+        /* Garante que ele ocupe o espaço disponível até o max-width */
+    }
 
 
     .botao-link {
@@ -1702,16 +1885,16 @@ footer {
     }
 
     .menu-item-description {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--text);
-    font-size: 0.9rem;
-    font-weight: 700;
-    max-width: 350px;
-    margin-top: 0.4rem;
-}
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: var(--text);
+        font-size: 0.9rem;
+        font-weight: 700;
+        max-width: 350px;
+        margin-top: 0.4rem;
+    }
 
     .footer-content {
         grid-template-columns: 1fr;
@@ -1772,16 +1955,16 @@ footer {
     }
 
     .menu-item-description {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--text);
-    font-size: 0.9rem;
-    font-weight: 700;
-    max-width: 350px;
-    margin-top: 0.4rem;
-}
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: var(--text);
+        font-size: 0.9rem;
+        font-weight: 700;
+        max-width: 350px;
+        margin-top: 0.4rem;
+    }
 
 
 
@@ -1831,16 +2014,16 @@ footer {
     }
 
     .menu-item-description {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--text);
-    font-size: 0.9rem;
-    font-weight: 700;
-    max-width: 350px;
-    margin-top: 0.4rem;
-}
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: var(--text);
+        font-size: 0.9rem;
+        font-weight: 700;
+        max-width: 350px;
+        margin-top: 0.4rem;
+    }
 
     .description-content {
         background-color: #ecac0a;
@@ -1888,16 +2071,16 @@ footer {
     }
 
     .menu-item-description {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--text);
-    font-size: 0.9rem;
-    font-weight: 700;
-    max-width: 350px;
-    margin-top: 0.4rem;
-}
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: var(--text);
+        font-size: 0.9rem;
+        font-weight: 700;
+        max-width: 350px;
+        margin-top: 0.4rem;
+    }
 
     .description-content {
         background-color: #ecac0a;
