@@ -1,0 +1,923 @@
+
+@media (max-width: 1200px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .hero h2 {
+        font-size: 2.4rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Centraliza os filhos horizontalmente */
+        width: 100%;
+    }
+
+    /* Use o nome exato da classe que está no seu HTML */
+    .menu-item-description {
+        display: block;
+        /* Parágrafo não precisa ser flex para centralizar texto */
+        text-align: center;
+        color: var(--text);
+        font-size: 0.9rem;
+        font-weight: 700;
+        max-width: 350px;
+        margin: 0.4rem auto 0 auto;
+        /* O 'auto' nas laterais centraliza o bloco */
+        width: 100%;
+        /* Garante que ele ocupe o espaço disponível até o max-width */
+    }
+
+
+    .button-ir-misto {
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .button-ir-misto {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin: 2.5rem auto 3rem;
+        background-color: #e6a307;
+        display: block;
+        padding: 10px;
+        width: 50%;
+        border-radius: 8px;
+        border: none;
+        transition: transform 0.5s, box-shadow 0.1s;
+    }
+
+
+    .button-ir-misto:hover {
+        background-color: #fb8507;
+        transform: translateY(-3px);
+    }
+
+    .button-voltar-tradicional {
+
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+
+        margin: 4rem auto 4.9rem;
+        background-color: #e6a307;
+        display: block;
+
+        padding: 10px;
+        width: 50%;
+        border-radius: 8px;
+        border: none;
+        transition: transform 0.5s, box-shadow 0.1s;
+    }
+
+    .button-voltar-tradicional:hover {
+        background-color: #fb8507;
+        transform: translateY(-3px);
+    }
+
+
+    .p_1,
+    .p_2,
+    .p_3 .p_4,
+    .p_5,
+    .p_6,
+    .p_7,
+    .p_8,
+    .p_ .p_10,
+    .p_11,
+    .p_12,
+    .p_13,
+    .p_14,
+    .p_15 .p_16,
+    .p_17,
+    .p_18,
+    .p_19,
+    .p_20 {
+        display: flex;
+        font-size: 0.9rem;
+        margin-top: 0.2rem;
+        font-size: 1.0rem;
+        font-weight: 700;
+    }
+
+
+}
+
+
+@media (max-width: 992px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .hero h2 {
+        font-size: 2.4rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Centraliza os filhos horizontalmente */
+        width: 100%;
+    }
+
+    .description-content {
+        background-color: #ecac0e;
+        border-radius: 8px;
+        padding: 0.2;
+        text-wrap: balance;
+        width: 100%;
+
+    }
+
+
+    /* Use o nome exato da classe que está no seu HTML */
+    .menu-item-description {
+        display: block;
+        /* Parágrafo não precisa ser flex para centralizar texto */
+        text-align: center;
+        color: var(--text);
+        font-size: 0.9rem;
+        font-weight: 700;
+        max-width: 350px;
+        margin: 0.4rem auto 0 auto;
+        /* O 'auto' nas laterais centraliza o bloco */
+        width: 100%;
+        /* Garante que ele ocupe o espaço disponível até o max-width */
+    }
+
+
+    .button-ir-misto {
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .button-ir-misto {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin: 2.5rem auto 3rem;
+        background-color: #e6a307;
+        display: block;
+        padding: 10px;
+        width: 50%;
+        border-radius: 8px;
+        border: none;
+        transition: transform 0.5s, box-shadow 0.1s;
+    }
+
+
+    .button-ir-misto:hover {
+        background-color: #fb8507;
+        transform: translateY(-3px);
+    }
+
+    .button-voltar-tradicional {
+
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+
+        margin: 4rem auto 4.9rem;
+        background-color: #e6a307;
+        display: block;
+
+        padding: 10px;
+        width: 50%;
+        border-radius: 8px;
+        border: none;
+        transition: transform 0.5s, box-shadow 0.1s;
+    }
+
+    .button-voltar-tradicional:hover {
+        background-color: #fb8507;
+        transform: translateY(-3px);
+    }
+
+
+    .p_1,
+    .p_2,
+    .p_3 .p_4,
+    .p_5,
+    .p_6,
+    .p_7,
+    .p_8,
+    .p_ .p_10,
+    .p_11,
+    .p_12,
+    .p_13,
+    .p_14,
+    .p_15 .p_16,
+    .p_17,
+    .p_18,
+    .p_19,
+    .p_20 {
+        display: flex;
+        font-size: 0.9rem;
+        margin-top: 0.2rem;
+        font-size: 1.0rem;
+        font-weight: 700;
+    }
+
+
+}
+
+
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+
+    .contact-grid {
+        display: grid !important;
+        /* Garante que o grid esteja ativo */
+        grid-template-columns: 1fr 1fr;
+        /* Força duas colunas iguais */
+
+        gap: 15px;
+        /* Espaçamento entre elas */
+        align-items: start;
+        /* Alinha os itens pelo topo */
+    }
+
+    /* Garanta que os itens dentro do grid não forcem largura total */
+    .contact-grid>div,
+    .contact-grid>section {
+        width: 100%;
+    }
+
+    .contact-grid>section {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+
+    .hero h2 {
+        font-size: 2.4rem
+    }
+
+    .hero {
+        height: auto;
+    }
+
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Centraliza os filhos horizontalmente */
+        width: 100%;
+    }
+
+    /* Use o nome exato da classe que está no seu HTML */
+    .menu-item-description {
+        display: block;
+        /* Parágrafo não precisa ser flex para centralizar texto */
+        text-align: center;
+        color: var(--text);
+        font-size: 0.9rem;
+        font-weight: 700;
+        max-width: 450px;
+        margin: 0.4rem auto 0 auto;
+        /* O 'auto' nas laterais centraliza o bloco */
+        width: 100%;
+        /* Garante que ele ocupe o espaço disponível até o max-width */
+    }
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #e8b006;
+    }
+
+
+    .description-content {
+        background-color: #ecac0a;
+        border-radius: 8px;
+        padding: 0.2;
+        text-wrap: balance;
+        width: 100%;
+        ;
+    }
+
+    .button-voltar-tradicional {
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+
+        margin: 4rem auto 4.9rem;
+        background-color: #e6a307;
+        display: block;
+
+        padding: 10px;
+        width: 50%;
+        border-radius: 8px;
+        border: none;
+        transition: transform 0.5s, box-shadow 0.1s;
+    }
+
+    .button-tradicional {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-top: 4rem;
+        font-size: 0.7rem;
+        font-weight: 700;
+        line-height: 1;
+        text-align: center;
+        width: 80%;
+        display: inline-block;
+        background-color: #e6a307;
+        color: #141514;
+        border: none;
+        border-radius: 10px;
+
+        transition: transform 0.5s, box-shadow 0.6s;
+        cursor: pointer;
+
+    }
+
+    .button-tradicional:hover {
+        transform: translateY(-6px);
+    }
+
+    .btn-adicionar-pedido {
+        display: inline-block;
+        background-color: #388E3c;
+        /* Exemplo de cor verde (Ação) */
+        color: white;
+        padding: 8px 15px;
+        border-radius: 4px;
+        text-decoration: none;
+        /* Remove o sublinhado padrão do link */
+        font-weight: bold;
+        text-align: center;
+        margin-top: 10px;
+        /* Adiciona um espaço abaixo da descrição */
+        transition: background-color 0.3s;
+        gap: 20px;
+
+    }
+
+
+
+    .p_1,
+    .p_2,
+    .p_3,
+    .p_4,
+    .p_5,
+    .p_6,
+    .p_7,
+    .p_8,
+    .p_9,
+    .p_10,
+    .p_11,
+    .p_12,
+    .p_13,
+    .p_14,
+    .p_15 .p_16,
+    .p_17,
+    .p_18,
+    .p_19,
+    .p_20 {
+        display: flex;
+        font-size: 0.9rem;
+        margin-top: 0.2rem;
+
+        font-weight: 700;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Centraliza os filhos horizontalmente */
+        width: 100%;
+    }
+
+    /* Use o nome exato da classe que está no seu HTML */
+    .menu-item-description {
+        display: block;
+        /* Parágrafo não precisa ser flex para centralizar texto */
+        text-align: center;
+        color: var(--text);
+        font-size: 0.9rem;
+        font-weight: 700;
+        max-width: 350px;
+        margin: 0.4rem auto 0 auto;
+        /* O 'auto' nas laterais centraliza o bloco */
+        width: 100%;
+        /* Garante que ele ocupe o espaço disponível até o max-width */
+    }
+
+
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        bottom: 20px;
+        right: 20px;
+    }
+
+
+
+
+    .button-ir-misto {
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .button-ir-misto {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin: 2.5rem auto 3rem;
+        background-color: #e6a307;
+        display: block;
+        padding: 10px;
+        width: 80%;
+        border-radius: 8px;
+        border: none;
+        transition: transform 0.5s, box-shadow 0.1s;
+    }
+
+
+    .button-ir-misto:hover {
+        background-color: #fb8507;
+        transform: translateY(-3px);
+    }
+
+    .button-voltar-tradicional {
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+
+        margin: 4rem auto 4.9rem;
+        background-color: #e6a307;
+        display: block;
+
+        padding: 10px;
+        width: 80%;
+        border-radius: 8px;
+        border: none;
+        transition: transform 0.5s, box-shadow 0.1s;
+    }
+
+    .button-voltar-tradicional:hover {
+        background-color: #fb8507;
+        transform: translateY(-3px);
+    }
+
+
+    .p_1,
+    .p_2,
+    .p_3,
+    .p_4,
+    .p_5,
+    .p_6,
+    .p_7,
+    .p_8,
+    .p_9,
+    .p_10,
+    .p_11,
+    .p_12,
+    .p_13,
+    .p.p_1,
+    .p_2,
+    .p_3,
+    .p_4,
+    .p_5,
+    .p_6,
+    .p_7,
+    .p_8,
+    .p_9,
+    .p_10,
+    .p_11,
+    .p_12,
+    .p_13,
+    .p_14,
+    .p_15 .p_16,
+    .p_17,
+    .p_18,
+    .p_19,
+    .p_20 {
+        display: flex;
+        font-size: 0.9rem;
+        margin-top: 0.2rem;
+        font-size: 1.0rem;
+        font-weight: 700;
+
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-item-description {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: var(--text);
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 550px) {
+    #pedido {
+        padding: 18px 8px;
+        max-width: 98vw;
+    }
+
+    #formPedido button {
+        font-size: 1rem;
+    }
+
+    .logo span {
+        font-size: 0.7rem;
+    }
+
+    .logo i {
+        font-size: 1.2rem;
+    }
+
+    .container {
+        padding: 0 4px;
+    }
+
+    nav ul {
+        gap: 8px;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+        padding: 4px 8px;
+    }
+
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+     .section-title {
+        font-size: 1rem;
+        color: #e8b006;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Centraliza os filhos horizontalmente */
+        width: 100%;
+    }
+
+    /* Use o nome exato da classe que está no seu HTML */
+    .menu-item-description {
+        display: block;
+        /* Parágrafo não precisa ser flex para centralizar texto */
+        text-align: center;
+        color: var(--text);
+        font-size: 0.9rem;
+        font-weight: 700;
+        max-width: 350px;
+        margin: 0.4rem auto 0 auto;
+        /* O 'auto' nas laterais centraliza o bloco */
+        width: 100%;
+        /* Garante que ele ocupe o espaço disponível até o max-width */
+    }
+
+
+    .botao-link {
+        width: 80%;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-column h4:after {
+        margin: 10px auto;
+    }
+
+    .description-content {
+        background-color: #ecac0a;
+        border-radius: 8px;
+        padding: 0.2;
+        text-wrap: balance;
+        width: 100%;
+        ;
+    }
+
+    .p_1,
+    .p_2,
+    .p_3,
+    .p_4,
+    .p_5,
+    .p_6,
+    .p_7,
+    .p_8,
+    .p_9,
+    .p_10,
+    .p_11,
+    .p_12,
+    .p_13,
+    .p_14,
+    .p_15 .p_16,
+    .p_17,
+    .p_18,
+    .p_19,
+    .p_20 {
+        display: flex;
+        font-size: 0.9rem;
+        margin-top: 0.2rem;
+        font-size: 1.0rem;
+        font-weight: 700;
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-item-description {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: var(--text);
+        font-size: 0.9rem;
+        font-weight: 700;
+        max-width: 350px;
+        margin-top: 0.4rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .whatsapp-float {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .description-content {
+        background-color: #ecac0a;
+        border-radius: 8px;
+        padding: 0.2;
+        text-wrap: balance;
+        width: 100%;
+        
+    }
+
+       .section-title {
+        font-size: 1rem;
+        color: #e8b006;
+    }
+
+    .p_1,
+    .p_2,
+    .p_3,
+    .p_4,
+    .p_5,
+    .p_6,
+    .p_7,
+    .p_8,
+    .p_9,
+    .p_10,
+    .p_11,
+    .p_12,
+    .p_13,
+    .p_14,
+    .p_15 .p_16,
+    .p_17,
+    .p_18,
+    .p_19,
+    .p_20 {
+        display: flex;
+        font-size: 0.9rem;
+        margin-top: 0.2rem;
+        font-size: 1.0rem;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 400px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-item-description {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: var(--text);
+        font-size: 0.9rem;
+        font-weight: 700;
+        max-width: 350px;
+        margin-top: 0.4rem;
+    }
+
+
+
+    .description-content {
+        background-color: #ecac0a;
+        border-radius: 8px;
+        padding: 0.2;
+        text-wrap: balance;
+        width: 100%;
+        ;
+    }
+
+    .section-title {
+        font-size: 1rem;
+        color: #e8b006;
+    }
+
+    .p_1,
+    .p_2,
+    .p_3,
+    .p_4,
+    .p_5,
+    .p_6,
+    .p_7,
+    .p_8,
+    .p_9,
+    .p_10,
+    .p_11,
+    .p_12,
+    .p_13,
+    .p_14,
+    .p_15 .p_16,
+    .p_17,
+    .p_18,
+    .p_19,
+    .p_20 {
+        display: flex;
+        font-size: 0.9rem;
+        margin-top: 0.2rem;
+        font-size: 1.0rem;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 375px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-item-description {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: var(--text);
+        font-size: 0.9rem;
+        font-weight: 700;
+        max-width: 350px;
+        margin-top: 0.4rem;
+    }
+
+    .description-content {
+        background-color: #ecac0a;
+        border-radius: 8px;
+        padding: 0.2;
+        text-wrap: balance;
+        width: 100%;
+        ;
+    }
+
+    .section-title {
+        font-size: 1rem;
+        color: #e8b006;
+    }
+
+ 
+}
+
+@media (max-width: 320px) {
+
+  
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-item-description {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: var(--text);
+        font-size: 0.9rem;
+        font-weight: 700;
+        max-width: 350px;
+        margin-top: 0.4rem;
+    }
+
+  
+
+       .section-title {
+        font-size: 1rem;
+        color: #e8b006;
+    }
+
+    .description-content {
+        background-color: #f3a807;
+        border-radius: 8px;
+        padding: 0.2;
+        text-wrap: balance;
+        width: 100%;
+        ;
+    }
+}
