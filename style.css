@@ -2084,7 +2084,7 @@ footer {
     }
     
     .button-ir-misto {
-        width: 60%; /* Aumenta a porcentagem para o botão não ficar minúsculo */
+        width: 100%; /* Aumenta a porcentagem para o botão não ficar minúsculo */
         padding: 8px;
     }
 }
