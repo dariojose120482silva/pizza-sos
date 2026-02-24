@@ -2063,5 +2063,16 @@ footer {
     transition: transform 0.5s, box-shadow 0.1s;
 }
 
- 
+}
+
+/* Para celulares "micro" */
+@media (max-width: 280px) {
+    .section-title {
+        font-size: 0.85rem; /* Reduz um pouco mais para não quebrar linha */
+    }
+    
+    .button-ir-misto {
+        width: 60%; /* Aumenta a porcentagem para o botão não ficar minúsculo */
+        padding: 8px;
+    }
 }
