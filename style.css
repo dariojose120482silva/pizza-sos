@@ -2076,3 +2076,15 @@ footer {
         padding: 8px;
     }
 }
+
+
+@media (max-width: 220px) {
+    .section-title {
+        font-size: 0.85rem; /* Reduz um pouco mais para não quebrar linha */
+    }
+    
+    .button-ir-misto {
+        width: 60%; /* Aumenta a porcentagem para o botão não ficar minúsculo */
+        padding: 8px;
+    }
+}
