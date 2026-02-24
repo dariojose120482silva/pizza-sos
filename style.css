@@ -801,16 +801,16 @@ nav a:hover {
 }
 
 .description-content {
-    background-color: #ecac0a;
+    background-color: #ecac0e;
     border-radius: 8px;
-    padding: 0.2;
+    padding: 0.2rem;
     text-wrap: balance;
 }
 
 .description {
-    background-color: #ecac0a;
+  background-color: #ecac0a;
     border-radius: 8px;
-    padding: 0.1;
+    padding: 0.2rem;
     width: 100%;
 }
 
@@ -1349,7 +1349,7 @@ footer {
         padding: 0.2;
         text-wrap: balance;
         width: 100%;
-        ;
+        
     }
 
 
