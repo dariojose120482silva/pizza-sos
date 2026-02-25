@@ -1,70 +1,131 @@
 /* Formulário de Pedido - Estilização moderna e responsiva */
 
+
+
 #pedido {
+
  
+
     background: #ffffff;
+
     border-radius: 12px;
+
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+
     padding: 20px;
+
     width: 95%; /* Mude de 100% para 95% */
+
     margin: 10px auto; /* Centraliza e dá respiro nas bordas */
+
     box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
-
-
 }
+
+
+
+
 
 
 
 /* Título "Seu Carrinho" dentro do formulário */
+
 .form-carrinho {
+
     text-align: center !important;
+
     color: #0a0a0a !important;
+
     /* Laranja/Amarelo */
+
     margin-bottom: 25px !important;
+
     font-size: 1.8rem !important;
+
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+
     text-shadow: #fa2609 0px 0px 10px !important;
+
     /* Brilho neon vermelho */
+
     display: block !important;
+
     width: 100% !important;
+
 }
+
+
 
 #formPedido label {
 
+
+
     display: block;
+
     margin-bottom: 6px;
+
     font-weight: 600;
+
     color: var(--dark);
+
 }
+
+
 
 #formPedido input,
+
 #formPedido textarea {
+
     width: 100%;
+
     max-width: 100%;
+
     border-radius: 6px;
+
     font-size: 0.95rem;
+
     background: #bcbcb877;
+
     transition: border-color 0.2s;
+
     margin-bottom: 12px;
+
     padding: 8px 10px;
+
     box-sizing: border-box;
+
     border: none;
+
 }
+
+
 
 #formPedido input::placeholder,
+
 #formPedido textarea::placeholder {
+
     color: #4d4a49;
+
     font-style: italic;
+
     opacity: 0.8;
+
 }
+
+
 
 #formPedido input:focus,
+
 #formPedido textarea:focus {
+
     border-color: #065ef7;
+
 }
 
-#formPedido button {
 
+
+/* Estiliza apenas o botão de enviar (Finalizar Pedido) */
+#formPedido button[type="submit"], 
+#formPedido .btn-enviar-pedido { 
     max-width: 100%;
     width: 100%;
     color: #161916;
@@ -78,88 +139,171 @@
     margin-top: 8px;
     background: #e6a707;
     text-shadow: #fb0707 0px 0px 10px;
+    display: block;
 }
+
+
 
 .button {
+
     transition: background 0.8s;
+
     background-color: #060611;
 
+
+
 }
+
+
 
 .button:hover {
+
     transform: translateY(-6px);
 
+
+
 }
+
+
 
 #formpedido button:hover {
 
+
+
     background: #07e659;
+
     color: #d41313;
+
     transform: translateY(-2px);
+
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
 }
+
+
+
+
 
 
 
 .form {
+
     background-color: #97c1a64b;
+
     /* Seu verde transparente */
+
     padding: 15px 20px;
+
     border-radius: 8px;
+
     max-width: 500px;
+
     /* ESTA É A TRAVA DE SEGURANÇA */
+
     margin: 40px auto;
+
     /* 60px de espaço no topo e centraliza horizontalmente */
+
     display: block;
+
     /* Garante que o auto funcione */
+
 }
+
+
 
 .section-form {
+
     background-color: transparent;
+
     width: 100%;
+
     display: flex;
+
     justify-content: center;
+
     /* Mantém o formulário no meio da tela */
+
 }
+
+
 
 .carrinho-estilo {
+
     background: #fff;
+
     border: 2px dashed #dcaa22;
+
     border-radius: 8px;
+
     padding: 15px;
+
     margin-bottom: 20px;
+
 }
+
+
 
 #lista-pizzas {
+
     list-style: none;
+
     padding: 0;
+
 }
+
+
 
 .item-carrinho {
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
     border-bottom: 1px solid #eee;
+
     padding: 8px 0;
+
     color: #333;
+
     font-size: 0.9rem;
+
 }
+
+
 
 .btn-remover {
+
     background: #ff4444;
+
     color: white;
+
     border: none;
+
     padding: 2px 8px;
+
     border-radius: 4px;
+
     cursor: pointer;
+
     font-size: 0.8rem;
+
 }
 
+
+
 .total-container {
+
     margin-top: 15px;
+
     text-align: right;
+
     font-size: 1.1rem;
+
     color: #d41313;
+
 }
 
 * {
@@ -1519,2624 +1663,96 @@ footer {
 .copyright {
     text-align: center;
     padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(226, 16, 16, 0.1);
     font-size: 0.9rem;
     color: #aaa;
 }
 
-
-/* Ajuste do Botão de Remover Item (X) no Carrinho */
-.btn-remover {
-    background-color: #ff4444 !important;
+/* Isso tem mais "força" que apenas .btn-remover, então o !important morre */
+/* Botão de Remover - Pequeno e Vermelho */
+#formPedido .btn-remover {
+    width: auto !important; /* Cancela o 100% anterior */
+    background: #ff4444 !important; /* Cancela o laranja */
     color: white !important;
-    border: none !important;
-
-    /* TAMANHO FIXO: O segredo para ele não esticar */
-    width: 24px !important;
-    height: 24px !important;
-
-    /* ALINHAMENTO DO "X" */
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-
+    padding: 2px 8px !important;
+    font-size: 0.8rem !important;
     border-radius: 4px !important;
-    cursor: pointer !important;
-    font-size: 12px !important;
-    /* Tamanho do X */
-    font-weight: bold !important;
-
-    /* ESPAÇAMENTO */
     margin-left: 10px !important;
-    /* Afasta do preço/texto */
-    padding: 0 !important;
-    /* Remove qualquer padding que o esteja inchando */
-    transition: background 0.3s !important;
+    display: inline-flex !important; /* Garante que ele fique do lado do preço */
+    text-shadow: none !important; /* Remove o brilho vermelho do botão laranja */
+    box-shadow: none !important;
 }
 
-.btn-remover:hover {
-    background-color: #cc0000 !important;
+#carrinho .item-carrinho .btn-remover:hover {
+    background-color: #cc0000;
 }
 
-/* Garante que o item do carrinho não fique apertado */
-.item-carrinho {
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    padding: 10px 5px !important;
-    border-bottom: 1px solid #eee !important;
-}
-
-
-
-
-
-
-@media (max-width: 1200px) {
-    .about-content {
-        flex-direction: column;
-    }
-
-    .hero h2 {
-        font-size: 2.4rem;
-    }
-
-    .hero p {
-        font-size: 1.2rem;
-    }
-
-    .section-title {
-        font-size: 1.8rem;
-    }
-
-    .description {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        /* Centraliza os filhos horizontalmente */
-        width: 100%;
-    }
-
-    /* Use o nome exato da classe que está no seu HTML */
-    .menu-item-description {
-        display: block;
-        /* Parágrafo não precisa ser flex para centralizar texto */
-        text-align: center;
-        color: var(--text);
-        font-size: 0.9rem;
-        font-weight: 700;
-        max-width: 350px;
-        margin: 0.4rem auto 0 auto;
-        /* O 'auto' nas laterais centraliza o bloco */
-        width: 100%;
-        /* Garante que ele ocupe o espaço disponível até o max-width */
-    }
-
-
-    .button-ir-misto {
-        border: none;
-        cursor: pointer;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .button-ir-misto {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        margin: 2.5rem auto 3rem;
-        background-color: #e6a307;
-        display: block;
-        padding: 10px;
-        width: 50%;
-        border-radius: 8px;
-        border: none;
-        transition: transform 0.5s, box-shadow 0.1s;
-    }
-
-
-    .button-ir-misto:hover {
-        background-color: #fb8507;
-        transform: translateY(-3px);
-    }
-
-    .button-voltar-tradicional {
-
-        border: none;
-        cursor: pointer;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-
-        margin: 4rem auto 4.9rem;
-        background-color: #e6a307;
-        display: block;
-
-        padding: 10px;
-        width: 50%;
-        border-radius: 8px;
-        border: none;
-        transition: transform 0.5s, box-shadow 0.1s;
-    }
-
-    .button-voltar-tradicional:hover {
-        background-color: #fb8507;
-        transform: translateY(-3px);
-    }
-
-
-    .p_1,
-    .p_2,
-    .p_3 .p_4,
-    .p_5,
-    .p_6,
-    .p_7,
-    .p_8,
-    .p_ .p_10,
-    .p_11,
-    .p_12,
-    .p_13,
-    .p_14,
-    .p_15 .p_16,
-    .p_17,
-    .p_18,
-    .p_19,
-    .p_20 {
-        display: flex;
-        font-size: 0.9rem;
-        margin-top: 0.2rem;
-        font-size: 1.0rem;
-        font-weight: 700;
-    }
-
-
-}
-
-
-@media (max-width: 992px) {
-    .about-content {
-        flex-direction: column;
-    }
-
-    .hero h2 {
-        font-size: 2.4rem;
-    }
-
-    .hero p {
-        font-size: 1.2rem;
-    }
-
-    .section-title {
-        font-size: 1.8rem;
-    }
-
-    .description {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        /* Centraliza os filhos horizontalmente */
-        width: 100%;
-    }
-
-    .description-content {
-        background-color: #ecac0e;
-        border-radius: 8px;
-        padding: 0.2;
-        text-wrap: balance;
-        width: 100%;
-
-    }
-
-
-    /* Use o nome exato da classe que está no seu HTML */
-    .menu-item-description {
-        display: block;
-        /* Parágrafo não precisa ser flex para centralizar texto */
-        text-align: center;
-        color: var(--text);
-        font-size: 0.9rem;
-        font-weight: 700;
-        max-width: 350px;
-        margin: 0.4rem auto 0 auto;
-        /* O 'auto' nas laterais centraliza o bloco */
-        width: 100%;
-        /* Garante que ele ocupe o espaço disponível até o max-width */
-    }
-
-
-    .button-ir-misto {
-        border: none;
-        cursor: pointer;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .button-ir-misto {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        margin: 2.5rem auto 3rem;
-        background-color: #e6a307;
-        display: block;
-        padding: 10px;
-        width: 50%;
-        border-radius: 8px;
-        border: none;
-        transition: transform 0.5s, box-shadow 0.1s;
-    }
-
-
-    .button-ir-misto:hover {
-        background-color: #fb8507;
-        transform: translateY(-3px);
-    }
-
-    .button-voltar-tradicional {
-
-        border: none;
-        cursor: pointer;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-
-        margin: 4rem auto 4.9rem;
-        background-color: #e6a307;
-        display: block;
-
-        padding: 10px;
-        width: 50%;
-        border-radius: 8px;
-        border: none;
-        transition: transform 0.5s, box-shadow 0.1s;
-    }
-
-    .button-voltar-tradicional:hover {
-        background-color: #fb8507;
-        transform: translateY(-3px);
-    }
-
-
-    .p_1,
-    .p_2,
-    .p_3 .p_4,
-    .p_5,
-    .p_6,
-    .p_7,
-    .p_8,
-    .p_ .p_10,
-    .p_11,
-    .p_12,
-    .p_13,
-    .p_14,
-    .p_15 .p_16,
-    .p_17,
-    .p_18,
-    .p_19,
-    .p_20 {
-        display: flex;
-        font-size: 0.9rem;
-        margin-top: 0.2rem;
-        font-size: 1.0rem;
-        font-weight: 700;
-    }
-
-
-}
-
-
-
-@media (max-width: 768px) {
-    .header-content {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    nav ul {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .about-content {
-        flex-direction: column;
-    }
-
-
-    .contact-grid {
-        display: grid !important;
-        /* Garante que o grid esteja ativo */
-        grid-template-columns: 1fr 1fr;
-        /* Força duas colunas iguais */
-
-        gap: 15px;
-        /* Espaçamento entre elas */
-        align-items: start;
-        /* Alinha os itens pelo topo */
-    }
-
-    /* Garanta que os itens dentro do grid não forcem largura total */
-    .contact-grid>div,
-    .contact-grid>section {
-        width: 100%;
-    }
-
-    .contact-grid>section {
-        width: 100%;
-        max-width: 100%;
-    }
-
-
-
-    .hero h2 {
-        font-size: 2.4rem
-    }
-
-    .hero {
-        height: auto;
-    }
-
-
-    .description {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        /* Centraliza os filhos horizontalmente */
-        width: 100%;
-    }
-
-    /* Use o nome exato da classe que está no seu HTML */
-    .menu-item-description {
-        display: block;
-        /* Parágrafo não precisa ser flex para centralizar texto */
-        text-align: center;
-        color: var(--text);
-        font-size: 0.9rem;
-        font-weight: 700;
-        max-width: 450px;
-        margin: 0.4rem auto 0 auto;
-        /* O 'auto' nas laterais centraliza o bloco */
-        width: 100%;
-        /* Garante que ele ocupe o espaço disponível até o max-width */
-    }
-
-    .description {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #e8b006;
-    }
-
-
-    .description-content {
-        background-color: #ecac0a;
-        border-radius: 8px;
-        padding: 0.2;
-        text-wrap: balance;
-        width: 100%;
-        ;
-    }
-
-    .button-voltar-tradicional {
-        border: none;
-        cursor: pointer;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-
-        margin: 4rem auto 4.9rem;
-        background-color: #e6a307;
-        display: block;
-
-        padding: 10px;
-        width: 50%;
-        border-radius: 8px;
-        border: none;
-        transition: transform 0.5s, box-shadow 0.1s;
-    }
-
-    .button-tradicional {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        margin-top: 4rem;
-        font-size: 0.7rem;
-        font-weight: 700;
-        line-height: 1;
-        text-align: center;
-        width: 80%;
-        display: inline-block;
-        background-color: #e6a307;
-        color: #141514;
-        border: none;
-        border-radius: 10px;
-
-        transition: transform 0.5s, box-shadow 0.6s;
-        cursor: pointer;
-
-    }
-
-    .button-tradicional:hover {
-        transform: translateY(-6px);
-    }
-
-    .btn-adicionar-pedido {
-        display: inline-block;
-        background-color: #388E3c;
-        /* Exemplo de cor verde (Ação) */
-        color: white;
-        padding: 8px 15px;
-        border-radius: 4px;
-        text-decoration: none;
-        /* Remove o sublinhado padrão do link */
-        font-weight: bold;
-        text-align: center;
-        margin-top: 10px;
-        /* Adiciona um espaço abaixo da descrição */
-        transition: background-color 0.3s;
-        gap: 20px;
-
-    }
-
-
-
-    .p_1,
-    .p_2,
-    .p_3,
-    .p_4,
-    .p_5,
-    .p_6,
-    .p_7,
-    .p_8,
-    .p_9,
-    .p_10,
-    .p_11,
-    .p_12,
-    .p_13,
-    .p_14,
-    .p_15 .p_16,
-    .p_17,
-    .p_18,
-    .p_19,
-    .p_20 {
-        display: flex;
-        font-size: 0.9rem;
-        margin-top: 0.2rem;
-
-        font-weight: 700;
-    }
-
-}
-
-@media (max-width: 576px) {
-    .menu-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-
-
-    .description {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        /* Centraliza os filhos horizontalmente */
-        width: 100%;
-    }
-
-    /* Use o nome exato da classe que está no seu HTML */
-    .menu-item-description {
-        display: block;
-        /* Parágrafo não precisa ser flex para centralizar texto */
-        text-align: center;
-        color: var(--text);
-        font-size: 0.9rem;
-        font-weight: 700;
-        max-width: 350px;
-        margin: 0.4rem auto 0 auto;
-        /* O 'auto' nas laterais centraliza o bloco */
-        width: 100%;
-        /* Garante que ele ocupe o espaço disponível até o max-width */
-    }
-
-
-
-    .footer-content {
-        grid-template-columns: 1fr;
-    }
-
-    .whatsapp-float {
-        width: 50px;
-        height: 50px;
-        font-size: 1.5rem;
-        bottom: 20px;
-        right: 20px;
-    }
-
-
-
-
-    .button-ir-misto {
-        border: none;
-        cursor: pointer;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .button-ir-misto {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        margin: 2.5rem auto 3rem;
-        background-color: #e6a307;
-        display: block;
-        padding: 10px;
-        width: 80%;
-        border-radius: 8px;
-        border: none;
-        transition: transform 0.5s, box-shadow 0.1s;
-    }
-
-
-    .button-ir-misto:hover {
-        background-color: #fb8507;
-        transform: translateY(-3px);
-    }
-
-    .button-voltar-tradicional {
-        border: none;
-        cursor: pointer;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-
-        margin: 4rem auto 4.9rem;
-        background-color: #e6a307;
-        display: block;
-
-        padding: 10px;
-        width: 80%;
-        border-radius: 8px;
-        border: none;
-        transition: transform 0.5s, box-shadow 0.1s;
-    }
-
-    .button-voltar-tradicional:hover {
-        background-color: #fb8507;
-        transform: translateY(-3px);
-    }
-
-
-    .p_1,
-    .p_2,
-    .p_3,
-    .p_4,
-    .p_5,
-    .p_6,
-    .p_7,
-    .p_8,
-    .p_9,
-    .p_10,
-    .p_11,
-    .p_12,
-    .p_13,
-    .p.p_1,
-    .p_2,
-    .p_3,
-    .p_4,
-    .p_5,
-    .p_6,
-    .p_7,
-    .p_8,
-    .p_9,
-    .p_10,
-    .p_11,
-    .p_12,
-    .p_13,
-    .p_14,
-    .p_15 .p_16,
-    .p_17,
-    .p_18,
-    .p_19,
-    .p_20 {
-        display: flex;
-        font-size: 0.9rem;
-        margin-top: 0.2rem;
-        font-size: 1.0rem;
-        font-weight: 700;
-
-    }
-}
-
-@media (max-width: 480px) {
-    .menu-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .menu-item-description {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        color: var(--text);
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 550px) {
-    #pedido {
-        padding: 18px 8px;
-        max-width: 98vw;
-    }
-
-    #formPedido button {
-        font-size: 1rem;
-    }
-
-    .logo span {
-        font-size: 0.7rem;
-    }
-
-    .logo i {
-        font-size: 1.2rem;
-    }
-
-    .container {
-        padding: 0 4px;
-    }
-
-    nav ul {
-        gap: 8px;
-    }
-
-    nav a {
-        font-size: 0.9rem;
-        padding: 4px 8px;
-    }
-
-    .hero h2 {
-        font-size: 2.2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-     .section-title {
-        font-size: 2rem;
-        
-    }
-
-    .about-text p {
-        font-size: 1rem;
-    }
-
-    .menu-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .description {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        /* Centraliza os filhos horizontalmente */
-        width: 100%;
-    }
-
-    /* Use o nome exato da classe que está no seu HTML */
-    .menu-item-description {
-        display: block;
-        /* Parágrafo não precisa ser flex para centralizar texto */
-        text-align: center;
-        color: var(--text);
-        font-size: 0.9rem;
-        font-weight: 700;
-        max-width: 350px;
-        margin: 0.4rem auto 0 auto;
-        /* O 'auto' nas laterais centraliza o bloco */
-        width: 100%;
-        /* Garante que ele ocupe o espaço disponível até o max-width */
-    }
-
-
-    .botao-link {
-        width: 80%;
-    }
-
-    .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .footer-column h4:after {
-        margin: 10px auto;
-    }
-
-    .description-content {
-        background-color: #ecac0a;
-        border-radius: 8px;
-        padding: 0.2;
-        text-wrap: balance;
-        width: 100%;
-        ;
-    }
-
-}
-
-@media (max-width: 480px) {
-    .menu-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .menu-item-description {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        color: var(--text);
-        font-size: 0.9rem;
-        font-weight: 700;
-        max-width: 350px;
-        margin-top: 0.4rem;
-    }
-
-    .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .whatsapp-float {
-        width: 40px;
-        height: 40px;
-        font-size: 1.2rem;
-        bottom: 15px;
-        right: 15px;
-    }
-
-    .description-content {
-        background-color: #ecac0a;
-        border-radius: 8px;
-        padding: 0.2;
-        text-wrap: balance;
-        width: 100%;
-        
-    }
-
-       .section-title {
-        font-size: 1rem;
-        
-    }
-
-   .button-ir-misto {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 2.5rem auto 3rem;
-    background-color: #e6a307;
-    display: block;
-    padding: 10px;
-    width: 50%;
-    border-radius: 8px;
-    border: none;
-    transition: transform 0.5s, box-shadow 0.1s;
-}
-}
-
-@media (max-width: 400px) {
-    .menu-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .menu-item-description {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        color: var(--text);
-        font-size: 0.9rem;
-        font-weight: 700;
-        max-width: 350px;
-        margin-top: 0.4rem;
-    }
-
-
-
-    .description-content {
-        background-color: #ecac0a;
-        border-radius: 8px;
-        padding: 0.2;
-        text-wrap: balance;
-        width: 100%;
-        ;
-    }
-
-    .section-title {
-        font-size: 1rem;
-      
-    }
-.button-ir-misto {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 2.5rem auto 3rem;
-    background-color: #e6a307;
-    display: block;
-    padding: 10px;
-    width: 20%;
-    border-radius: 8px;
-    border: none;
-    transition: transform 0.5s, box-shadow 0.1s;
-}
-}
-
-@media (max-width: 375px) {
-    .menu-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .menu-item-description {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        color: var(--text);
-        font-size: 0.9rem;
-        font-weight: 700;
-        max-width: 350px;
-        margin-top: 0.4rem;
-    }
-
-    .description-content {
-        background-color: #ecac0a;
-        border-radius: 8px;
-        padding: 0.2;
-        text-wrap: balance;
-        width: 100%;
-        ;
-    }
-
-    .section-title {
-        font-size: 1rem;
-
-    }
-
- .button-ir-misto {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 2.5rem auto 3rem;
-    background-color: #e6a307;
-    display: block;
-    padding: 10px;
-    width: 20%;
-    border-radius: 8px;
-    border: none;
-    transition: transform 0.5s, box-shadow 0.1s;
-}
-}
-
-@media (max-width: 320px) {
-
-  
-    .menu-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .menu-item-description {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        color: var(--text);
-        font-size: 0.9rem;
-        font-weight: 700;
-        max-width: 350px;
-        margin-top: 0.4rem;
-    }
-
-  
-
-       .section-title {
-        font-size: 1rem;
-        
-    }
-
-    .description-content {
-        background-color: #f3a807;
-        border-radius: 8px;
-        padding: 0.2;
-        text-wrap: balance;
-        width: 100%;
-        ;
-    }
-
-  .button-ir-misto {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 2.5rem auto 3rem;
-    background-color: #e6a307;
-    display: block;
-    padding: 10px;
-    width: 60%;
-    border-radius: 8px;
-    border: none;
-    transition: transform 0.5s, box-shadow 0.1s;
-}
-
-}
-
-.button-ir-misto {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 2.5rem auto 3rem;
-    background-color: #e6a307;
-    display: block;
-    padding: 10px;
-    width: 20%;
-    border-radius: 8px;
-    border: none;
-    transition: transform 0.5s, box-shadow 0.1s;
-}
-
-
-.button-ir-misto:hover {
-    background-color: #fb8507;
-    transform: translateY(-3px);
-}
-
-.button-voltar-tradicional {
-
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-
-    margin: 4rem auto 4.9rem;
-    background-color: #e6a307;
-    display: block;
-
-    padding: 10px;
-    width: 20%;
-    border-radius: 8px;
-    border: none;
-    transition: transform 0.5s, box-shadow 0.1s;
-}
-
-.button-voltar-tradicional:hover {
-    background-color: #fb8507;
-    transform: translateY(-3px);
-}
-
-.fa-undo {
-
-
-    font-size: 0.9rem;
-    font-weight: 700;
-    padding: 0.2rem;
-}
-
-.btn:hover {
-    background-color: white;
-    color: var(--primary);
-    transform: translateY(-3px);
-}
-
-.btn-emergency {
-    background-color: #ff4444;
-    color: rgb(234, 225, 225);
-    animation: emergency-pulse 1.5s infinite;
-}
-
-.div-botao {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 80px;
-}
-
-
-
-.link {
-    color: #080813;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-decoration: none;
-    text-shadow: #e61d07 2px 0px 0px;
-}
-
-
-/* Emergency Banner */
-
-
-
-.emergency-banner {
-    background:
-        url('https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1200&q=80');
-    background-size: cover;
-    background-position: center;
-    /* Centraliza a imagem de fundo */
-    background-position: center;
-
-    /* Evita que a imagem se repita */
-    background-repeat: no-repeat;
-
-    /* Faz a imagem cobrir todo o espaço do contêiner */
-    background-size: cover;
-
-    /* Opcional: Adiciona um pouco de preenchimento para o texto não ficar colado nas bordas */
-    padding: 60px 20px;
-
-    color: rgb(210, 186, 186);
-    text-align: center;
-    padding: 15px;
-    margin-bottom: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(255, 68, 68, 0.3);
-}
-
-.h3dois {
-    background-color: #91f40751;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    padding: 5px;
-    text-shadow: 3px 4px 6px rgba(246, 3, 3, 0.93);
-}
-
-.pdois {
-    background-color: #91f40751;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    padding: 5px;
-    text-shadow: 3px 4px 6px rgba(246, 3, 3, 0.93);
-}
-
-.emergency-banner h3 {
-    color: #000;
-    font-size: 1.5rem;
-    margin-bottom: 5px;
-
-}
-
-.emergency-banner p {
-
-    color: #000;
-    font-size: 1.1rem;
-    opacity: 0.9;
-}
-
-/* About Section */
-.about {
-    padding: 80px 0;
-    background-color: #e0c18b;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    margin-bottom: 50px;
-}
-
-
-
-.section-title {
-    text-align: center;
-    margin-bottom: 50px;
-    color: var(--secondar);
-    /* Amarelo para destaque */
-    position: relative;
-    color: #0b0808;
-    text-shadow: 3px 4px 6px #f60303ce;
-    font-size: 2.2rem;
-    font-weight: bold;
-}
-
-
-/* Estilização do aviso */
-.aviso-misto {
-    display: block;
-    /* Garante que ele comece visível */
-    text-align: center;
-    /* Centraliza o texto */
-    margin-top: 10px;
-    /* Espaço em relação ao título H2 */
-    margin-bottom: 20px;
-    /* Espaço em relação ao botão abaixo */
-    color: #090909;
-    /* Uma cor de destaque (Laranja) */
-    font-weight: bold;
-    /* Deixa o texto em negrito */
-    font-size: 0.95rem;
-    /* Tamanho da fonte levemente menor que o padrão */
-}
-
-/* Opcional: Efeito suave quando o aviso aparecer/sumir */
-.aviso-misto {
-    transition: opacity 0.3s ease;
-}
-
-
-
-
-.section-title-central {
-    text-align: center;
-    margin-bottom: 50px;
-    color: var(--secondar);
-    /* Amarelo para destaque */
-    position: relative;
-    color: #090a0c;
-    text-shadow: 3px 4px 6px rgba(249, 73, 9, 0.808);
-    font-size: 2.2rem;
-    font-weight: bold;
-}
-
-.contact-details {
-    color: #030d02e4;
-    font-weight: bold;
-    text-shadow: 3px 4px 6px rgb(4, 8, 243);
-    background-color: #a0f20966;
-    border-radius: 5px;
-    padding: 10px;
-}
-
-.section-title:after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 3px;
-    background-color: var(--primary);
-    /* Roxo para o detalhe */
-    margin: 15px auto;
-}
-
-.about-content {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-}
-
-.about-text {
-    background-color: #f9b60023;
-    flex: 1;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(241, 4, 4, 0.1);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-}
-
-.s-o-s {
-    color: #07fb13;
-    font-weight: bold;
-    text-shadow: 3px 4px 6px rgba(14, 2, 2, 0.986);
-}
-
-.about-text h3 {
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    background-color: #f0e40cdc;
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: var(--text-ligh);
-    color: #121209;
-    box-shadow: #140606;
-    opacity: 0.9;
-    text-shadow: #140606;
-    text-shadow: 5px 4px 6px rgba(237, 68, 7, 0.774);
-}
-
-
-.about-text p {
-    margin-bottom: 20px;
-    font-size: 1.3rem;
-    color: var(--text-ligh);
-    color: #0c0c07;
-
-    opacity: 0.9;
-
-
-}
-
-.about-image {
-    flex: 1;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.about-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.5s ease;
-}
-
-.about-image:hover img {
-    transform: scale(1.05);
-}
-
-/* Menu Section */
-.menu {
-
-
-    background-size: cover;
-    background-position: center;
-    padding: 80px 0;
-    background-color: #90a74c7f;
-    border-radius: 10px;
-    margin-bottom: 50px;
-}
-
-.menu-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 30px;
-}
-
-.menu-item {
-    background-color: #f1dd94;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 12px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    position: relative;
-}
-
-.menu-item:hover {
-    transform: translateY(-10px);
-}
-
-.menu-item-badge {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    background-color: var(--primary);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    z-index: 2;
-}
-
-.menu-item-image {
-
-    height: 290px;
-    overflow: hidden;
-}
-
-.menu-item-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.menu-item:hover .menu-item-image img {
-    transform: scale(1.1);
-}
-
-.menu-item-content {
-    background-color: #f6e6b0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 0.4rem;
-    flex-direction: column;
-    align-items: center;
-}
-
-.menu-item-header {
+#carrinho .item-carrinho {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
-    gap: 18px;
-    /* Espaço entre nome da pizza e preços */
-}
-
-.menu-item-name {
-    font-size: 1.5rem;
-    font-weight: 500;
-
-    width: 100%;
-    color: var(--dark);
-}
-
-.menu-item-price {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--primar);
-}
-
-.menu-item-description {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--text);
-    font-size: 0.9rem;
-    font-weight: 700;
-    max-width: 350px;
-    margin-top: 0.4rem;
-}
-
-.menu-description {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--text);
-    font-size: 0.9rem;
-    font-weight: 700;
-    max-width: 350px;
-}
-
-.description-content {
-    background-color: #ecac0e;
-    border-radius: 8px;
-    padding: 0.2rem;
-    text-wrap: balance;
-}
-
-.description {
-    background-color: #ecac0a;
-    border-radius: 8px;
-    padding: 0.2rem;
-    width: 100%;
-}
-
-
-/* Promotion Section */
-.promotion {
-    margin: 20px;
-    background:
-        url('https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1035&q=80');
-    background-size: cover;
-    background-position: center;
-    padding: 20px;
-    color: rgb(18, 2, 2);
-    text-shadow: 3px 4px 6px rgba(246, 3, 3, 0.93);
-    border: #121212;
-    margin-bottom: 5px;
-    border-radius: 10px;
-
-}
-
-
-
-.promotion h3 {
-    padding: 5px;
-    width: 100%;
-    background-color: #25d3aa9f;
-    font-size: 1.7rem;
-    margin-bottom: 20px;
-}
-
-.promotion p {
-
-    padding: 10px;
-    background-color: #25d3aa9f;
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto 30px;
-
-}
-
-.promocao {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    text-shadow: 3px 4px 6px rgba(246, 3, 3, 0.93);
-    padding: 10px;
-    font-size: 1.5rem;
-    border-radius: 5px;
-
-}
-
-.pizza-media {
-    border-radius: 5px;
-
-}
-
-.emergencia {
-    text-shadow: 3px 4px 6px rgba(246, 3, 3, 0.93);
-    padding: 10px;
-    font-size: 1.2rem;
-    border-radius: 5px;
-}
-
-/* Contact Section */
-.contact {
-    padding: 80px 0;
-    background-color: #58483a6f;
-    border-radius: 10px;
-    margin-bottom: 50px;
-}
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.contact-item {
-    gap: 40px;
-}
-
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-.contact-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 15px;
-}
-
-.contact-icon {
-    background-color: var(--light);
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--primary);
-    font-size: 1.2rem;
-}
-
-.contact-details h4 {
-    margin-bottom: 5px;
-    color: var(--dark);
-}
-
-/* Estilização básica do botão de ação */
-.btn-adicionar-pedido {
-    display: inline-block;
-    background-color: #388E3c;
-    /* Exemplo de cor verde (Ação) */
-    color: white;
-    padding: 8px 15px;
-    border-radius: 4px;
-    text-decoration: none;
-    /* Remove o sublinhado padrão do link */
-    font-weight: bold;
-    text-align: center;
-    margin-top: 10px;
-    /* Adiciona um espaço abaixo da descrição */
-    transition: background-color 0.3s;
-}
-
-.btn-adicionar-pedido:hover {
-    background-color: #2E7D32;
-    /* Um tom mais escuro ao passar o mouse */
-}
-
-/* Estilização para alinhar os botões Grande e Média lado a lado */
-
-.menu-item-actions {
-    display: flex;
-    /* 1. Ativa o layout flexível */
-    gap: 10px;
-    /* 2. Adiciona um espaçamento de 10px entre os botões */
-    margin-top: 20px;
-    justify-content: center;
-    padding: 15px;
-}
-
-.btn-adicionar-pedido {
-    /* 4. Faz com que os botões dividam o espaço igualmente */
-    flex-grow: 1;
-    /* Mantenha suas outras regras de estilo de botão aqui (cor, padding, etc.) */
-    padding: 10px px;
-    text-align: center;
-    font-size: 14px;
-}
-
-.menu-mista {
-    display: none;
-}
-
-/* Container do botão para controle de alinhamento */
-.menu-item-actions {
-    text-align: right;
-    /* Opcional: Alinha o botão à direita do card */
-    margin-top: 10px;
-}
-
-.hours-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-}
-
-.hours-table td {
-    padding: 8px 0;
+    padding: 10px 5px;
     border-bottom: 1px solid #eee;
 }
 
-.hours-table td:last-child {
-    text-align: right;
-    font-weight: 500;
-}
-
-.map {
-    border-radius: 10px;
+.item-carrinho span {
+    max-width: 150px; /* Impede que o nome da pizza empurre o botão "X" para fora */
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    height: 100%;
-    min-height: 300px;
+    text-overflow: ellipsis; /* Coloca "..." se o nome for muito grande */
+    white-space: nowrap;
 }
 
-.map iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
+.menu-item-image {
+    height: auto; 
+    min-height: 200px;
+    max-height: 290px;
 }
 
-/* Delivery Section */
-.delivery {
-    padding: 60px 0;
-    background-color: var(--light);
-    text-align: center;
-    border-radius: 10px;
-    margin-bottom: 50px;
-}
-
-.delivery-options {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 30px;
-    flex-wrap: wrap;
-}
-
-.delivery-option {
-    background-color: rgb(207, 31, 31);
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    width: 250px;
-}
-
-.delivery-option i {
-    font-size: 2.5rem;
-    color: var(--primary);
-    margin-bottom: 15px;
-}
-
-.container-promotion,
-.container-atendimento {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-/* Footer */
-footer {
-    background-color: var(--body-bg);
-    color: rgb(208, 214, 32);
-    padding: 50px 0 20px;
-    box-shadow: 0 -5px 15px rgba(244, 4, 4, 0.748);
-    border-radius: 8px;
-}
-
-
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    margin-bottom: 40px;
-
-}
-
-.footer-column h4 {
-    color: #e61d07;
-    margin-bottom: 20px;
-    font-size: 1.2rem;
-    position: relative;
-    padding-bottom: 10px;
-}
-
-.footer-column h4:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 40px;
-    height: 2px;
-    background-color: var(--secondary);
-}
-
-.footer-links {
-    list-style: none;
-}
-
-.footer-links li {
-    margin-bottom: 10px;
-}
-
-.footer-links a {
-    color: #19f605;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    text-shadow: #d41313 2px 0px 0px;
-}
-
-.footer-links a:hover {
-    color: var(--secondary);
-}
-
-.social-links {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.social-links a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background-color: var(--section-bg);
-    border-radius: 50%;
-    color: #FFBE0B;
-    transition: all 0.3s ease;
-}
-
-.social-links a:hover {
-    background-color: #19f605;
-    color: rgb(240, 5, 5);
-    transform: translateY(-3px);
-}
-
-.copyright {
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    font-size: 0.9rem;
-    color: #aaa;
-}
-
-
-/* Ajuste do Botão de Remover Item (X) no Carrinho */
-.btn-remover {
-    background-color: #ff4444 !important;
-    color: white !important;
-    border: none !important;
-
-    /* TAMANHO FIXO: O segredo para ele não esticar */
-    width: 24px !important;
-    height: 24px !important;
-
-    /* ALINHAMENTO DO "X" */
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    border-radius: 4px !important;
-    cursor: pointer !important;
-    font-size: 12px !important;
-    /* Tamanho do X */
-    font-weight: bold !important;
-
-    /* ESPAÇAMENTO */
-    margin-left: 10px !important;
-    /* Afasta do preço/texto */
-    padding: 0 !important;
-    /* Remove qualquer padding que o esteja inchando */
-    transition: background 0.3s !important;
-}
-
-.btn-remover:hover {
-    background-color: #cc0000 !important;
-}
-
-/* Garante que o item do carrinho não fique apertado */
-.item-carrinho {
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    padding: 10px 5px !important;
-    border-bottom: 1px solid #eee !important;
-}
-
-
-
-
-
-
-@media (max-width: 1200px) {
-    .about-content {
-        flex-direction: column;
-    }
-
-    .hero h2 {
-        font-size: 2.4rem;
-    }
-
-    .hero p {
-        font-size: 1.2rem;
-    }
-
-    .section-title {
-        font-size: 1.8rem;
-    }
-
-    .description {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        /* Centraliza os filhos horizontalmente */
-        width: 100%;
-    }
-
-    /* Use o nome exato da classe que está no seu HTML */
-    .menu-item-description {
-        display: block;
-        /* Parágrafo não precisa ser flex para centralizar texto */
-        text-align: center;
-        color: var(--text);
-        font-size: 0.9rem;
-        font-weight: 700;
-        max-width: 350px;
-        margin: 0.4rem auto 0 auto;
-        /* O 'auto' nas laterais centraliza o bloco */
-        width: 100%;
-        /* Garante que ele ocupe o espaço disponível até o max-width */
-    }
-
-
-    .button-ir-misto {
-        border: none;
-        cursor: pointer;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .button-ir-misto {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        margin: 2.5rem auto 3rem;
-        background-color: #e6a307;
-        display: block;
-        padding: 10px;
-        width: 50%;
-        border-radius: 8px;
-        border: none;
-        transition: transform 0.5s, box-shadow 0.1s;
-    }
-
-
-    .button-ir-misto:hover {
-        background-color: #fb8507;
-        transform: translateY(-3px);
-    }
-
-    .button-voltar-tradicional {
-
-        border: none;
-        cursor: pointer;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-
-        margin: 4rem auto 4.9rem;
-        background-color: #e6a307;
-        display: block;
-
-        padding: 10px;
-        width: 50%;
-        border-radius: 8px;
-        border: none;
-        transition: transform 0.5s, box-shadow 0.1s;
-    }
-
-    .button-voltar-tradicional:hover {
-        background-color: #fb8507;
-        transform: translateY(-3px);
-    }
-
-
-    .p_1,
-    .p_2,
-    .p_3 .p_4,
-    .p_5,
-    .p_6,
-    .p_7,
-    .p_8,
-    .p_ .p_10,
-    .p_11,
-    .p_12,
-    .p_13,
-    .p_14,
-    .p_15 .p_16,
-    .p_17,
-    .p_18,
-    .p_19,
-    .p_20 {
-        display: flex;
-        font-size: 0.9rem;
-        margin-top: 0.2rem;
-        font-size: 1.0rem;
-        font-weight: 700;
-    }
-
-
-}
-
-
+/* --- 1. AJUSTES PARA TABLETS E TELAS MÉDIAS (Geral até 992px) --- */
 @media (max-width: 992px) {
     .about-content {
-        flex-direction: column;
+        flex-direction: column; /* Empilha imagem e texto */
     }
 
-    .hero h2 {
-        font-size: 2.4rem;
-    }
-
-    .hero p {
-        font-size: 1.2rem;
-    }
-
-    .section-title {
-        font-size: 1.8rem;
-    }
-
-    .description {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        /* Centraliza os filhos horizontalmente */
-        width: 100%;
-    }
-
-    .description-content {
-        background-color: #ecac0e;
-        border-radius: 8px;
-        padding: 0.2;
-        text-wrap: balance;
-        width: 100%;
-
-    }
-
-
-    /* Use o nome exato da classe que está no seu HTML */
-    .menu-item-description {
-        display: block;
-        /* Parágrafo não precisa ser flex para centralizar texto */
-        text-align: center;
-        color: var(--text);
-        font-size: 0.9rem;
-        font-weight: 700;
-        max-width: 350px;
-        margin: 0.4rem auto 0 auto;
-        /* O 'auto' nas laterais centraliza o bloco */
-        width: 100%;
-        /* Garante que ele ocupe o espaço disponível até o max-width */
-    }
-
-
-    .button-ir-misto {
-        border: none;
-        cursor: pointer;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .button-ir-misto {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        margin: 2.5rem auto 3rem;
-        background-color: #e6a307;
-        display: block;
-        padding: 10px;
-        width: 50%;
-        border-radius: 8px;
-        border: none;
-        transition: transform 0.5s, box-shadow 0.1s;
-    }
-
-
-    .button-ir-misto:hover {
-        background-color: #fb8507;
-        transform: translateY(-3px);
-    }
-
-    .button-voltar-tradicional {
-
-        border: none;
-        cursor: pointer;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-
-        margin: 4rem auto 4.9rem;
-        background-color: #e6a307;
-        display: block;
-
-        padding: 10px;
-        width: 50%;
-        border-radius: 8px;
-        border: none;
-        transition: transform 0.5s, box-shadow 0.1s;
-    }
-
-    .button-voltar-tradicional:hover {
-        background-color: #fb8507;
-        transform: translateY(-3px);
-    }
-
-
-    .p_1,
-    .p_2,
-    .p_3 .p_4,
-    .p_5,
-    .p_6,
-    .p_7,
-    .p_8,
-    .p_ .p_10,
-    .p_11,
-    .p_12,
-    .p_13,
-    .p_14,
-    .p_15 .p_16,
-    .p_17,
-    .p_18,
-    .p_19,
-    .p_20 {
-        display: flex;
-        font-size: 0.9rem;
-        margin-top: 0.2rem;
-        font-size: 1.0rem;
-        font-weight: 700;
-    }
-
-
-}
-
-
-
-@media (max-width: 768px) {
-    .header-content {
-        flex-direction: column;
+    .hero h2 { font-size: 2.2rem; }
+    
+    .contact-grid {
+        grid-template-columns: 1fr 1fr; /* Duas colunas */
         gap: 15px;
     }
 
-    nav ul {
-        justify-content: center;
-        flex-wrap: wrap;
+    /* Ajuste global dos botões para telas menores */
+    .button-ir-misto, .button-voltar-tradicional {
+        width: 60%; /* Largura maior que no PC, menor que no mobile total */
+        margin: 2rem auto;
     }
-
-    .about-content {
-        flex-direction: column;
-    }
-
-
-    .contact-grid {
-        display: grid !important;
-        /* Garante que o grid esteja ativo */
-        grid-template-columns: 1fr 1fr;
-        /* Força duas colunas iguais */
-
-        gap: 15px;
-        /* Espaçamento entre elas */
-        align-items: start;
-        /* Alinha os itens pelo topo */
-    }
-
-    /* Garanta que os itens dentro do grid não forcem largura total */
-    .contact-grid>div,
-    .contact-grid>section {
-        width: 100%;
-    }
-
-    .contact-grid>section {
-        width: 100%;
-        max-width: 100%;
-    }
-
-
-
-    .hero h2 {
-        font-size: 2.4rem
-    }
-
-    .hero {
-        height: auto;
-    }
-
-
-    .description {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        /* Centraliza os filhos horizontalmente */
-        width: 100%;
-    }
-
-    /* Use o nome exato da classe que está no seu HTML */
-    .menu-item-description {
-        display: block;
-        /* Parágrafo não precisa ser flex para centralizar texto */
-        text-align: center;
-        color: var(--text);
-        font-size: 0.9rem;
-        font-weight: 700;
-        max-width: 450px;
-        margin: 0.4rem auto 0 auto;
-        /* O 'auto' nas laterais centraliza o bloco */
-        width: 100%;
-        /* Garante que ele ocupe o espaço disponível até o max-width */
-    }
-
-    .description {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #e8b006;
-    }
-
-
-    .description-content {
-        background-color: #ecac0a;
-        border-radius: 8px;
-        padding: 0.2;
-        text-wrap: balance;
-        width: 100%;
-        ;
-    }
-
-    .button-voltar-tradicional {
-        border: none;
-        cursor: pointer;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-
-        margin: 4rem auto 4.9rem;
-        background-color: #e6a307;
-        display: block;
-
-        padding: 10px;
-        width: 50%;
-        border-radius: 8px;
-        border: none;
-        transition: transform 0.5s, box-shadow 0.1s;
-    }
-
-    .button-tradicional {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        margin-top: 4rem;
-        font-size: 0.7rem;
-        font-weight: 700;
-        line-height: 1;
-        text-align: center;
-        width: 80%;
-        display: inline-block;
-        background-color: #e6a307;
-        color: #141514;
-        border: none;
-        border-radius: 10px;
-
-        transition: transform 0.5s, box-shadow 0.6s;
-        cursor: pointer;
-
-    }
-
-    .button-tradicional:hover {
-        transform: translateY(-6px);
-    }
-
-    .btn-adicionar-pedido {
-        display: inline-block;
-        background-color: #388E3c;
-        /* Exemplo de cor verde (Ação) */
-        color: white;
-        padding: 8px 15px;
-        border-radius: 4px;
-        text-decoration: none;
-        /* Remove o sublinhado padrão do link */
-        font-weight: bold;
-        text-align: center;
-        margin-top: 10px;
-        /* Adiciona um espaço abaixo da descrição */
-        transition: background-color 0.3s;
-        gap: 20px;
-
-    }
-
-
-
-    .p_1,
-    .p_2,
-    .p_3,
-    .p_4,
-    .p_5,
-    .p_6,
-    .p_7,
-    .p_8,
-    .p_9,
-    .p_10,
-    .p_11,
-    .p_12,
-    .p_13,
-    .p_14,
-    .p_15 .p_16,
-    .p_17,
-    .p_18,
-    .p_19,
-    .p_20 {
-        display: flex;
-        font-size: 0.9rem;
-        margin-top: 0.2rem;
-
-        font-weight: 700;
-    }
-
 }
 
-@media (max-width: 576px) {
-    .menu-grid {
-        grid-template-columns: 1fr;
+/* --- 2. AJUSTES PARA CELULARES (Até 600px) --- */
+@media (max-width: 600px) {
+    .section-title { font-size: 1.6rem; }
+
+    .menu-grid, .contact-grid, .footer-content {
+        grid-template-columns: 1fr; /* Tudo em uma coluna só */
     }
 
-    .contact-grid {
-        grid-template-columns: 1fr;
+    .button-ir-misto, .button-voltar-tradicional {
+        width: 85%; /* Quase largura total para facilitar o toque com o polegar */
     }
 
-
-
-    .description {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        /* Centraliza os filhos horizontalmente */
-        width: 100%;
-    }
-
-    /* Use o nome exato da classe que está no seu HTML */
-    .menu-item-description {
-        display: block;
-        /* Parágrafo não precisa ser flex para centralizar texto */
-        text-align: center;
-        color: var(--text);
-        font-size: 0.9rem;
-        font-weight: 700;
-        max-width: 350px;
-        margin: 0.4rem auto 0 auto;
-        /* O 'auto' nas laterais centraliza o bloco */
-        width: 100%;
-        /* Garante que ele ocupe o espaço disponível até o max-width */
-    }
-
-
-
-    .footer-content {
-        grid-template-columns: 1fr;
-    }
-
+    .hero h2 { font-size: 1.8rem; }
+    
     .whatsapp-float {
-        width: 50px;
-        height: 50px;
-        font-size: 1.5rem;
-        bottom: 20px;
-        right: 20px;
-    }
-
-
-
-
-    .button-ir-misto {
-        border: none;
-        cursor: pointer;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .button-ir-misto {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        margin: 2.5rem auto 3rem;
-        background-color: #e6a307;
-        display: block;
-        padding: 10px;
-        width: 80%;
-        border-radius: 8px;
-        border: none;
-        transition: transform 0.5s, box-shadow 0.1s;
-    }
-
-
-    .button-ir-misto:hover {
-        background-color: #fb8507;
-        transform: translateY(-3px);
-    }
-
-    .button-voltar-tradicional {
-        border: none;
-        cursor: pointer;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-
-        margin: 4rem auto 4.9rem;
-        background-color: #e6a307;
-        display: block;
-
-        padding: 10px;
-        width: 80%;
-        border-radius: 8px;
-        border: none;
-        transition: transform 0.5s, box-shadow 0.1s;
-    }
-
-    .button-voltar-tradicional:hover {
-        background-color: #fb8507;
-        transform: translateY(-3px);
-    }
-
-
-    .p_1,
-    .p_2,
-    .p_3,
-    .p_4,
-    .p_5,
-    .p_6,
-    .p_7,
-    .p_8,
-    .p_9,
-    .p_10,
-    .p_11,
-    .p_12,
-    .p_13,
-    .p.p_1,
-    .p_2,
-    .p_3,
-    .p_4,
-    .p_5,
-    .p_6,
-    .p_7,
-    .p_8,
-    .p_9,
-    .p_10,
-    .p_11,
-    .p_12,
-    .p_13,
-    .p_14,
-    .p_15 .p_16,
-    .p_17,
-    .p_18,
-    .p_19,
-    .p_20 {
-        display: flex;
-        font-size: 0.9rem;
-        margin-top: 0.2rem;
-        font-size: 1.0rem;
-        font-weight: 700;
-
-    }
-}
-
-@media (max-width: 480px) {
-    .menu-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .menu-item-description {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        color: var(--text);
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 550px) {
-    #pedido {
-        padding: 18px 8px;
-        max-width: 98vw;
-    }
-
-    #formPedido button {
-        font-size: 1rem;
-    }
-
-    .logo span {
-        font-size: 0.7rem;
-    }
-
-    .logo i {
-        font-size: 1.2rem;
-    }
-
-    .container {
-        padding: 0 4px;
-    }
-
-    nav ul {
-        gap: 8px;
-    }
-
-    nav a {
-        font-size: 0.9rem;
-        padding: 4px 8px;
-    }
-
-    .hero h2 {
-        font-size: 2.2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-     .section-title {
-        font-size: 2rem;
-        
-    }
-
-    .about-text p {
-        font-size: 1rem;
-    }
-
-    .menu-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .description {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        /* Centraliza os filhos horizontalmente */
-        width: 100%;
-    }
-
-    /* Use o nome exato da classe que está no seu HTML */
-    .menu-item-description {
-        display: block;
-        /* Parágrafo não precisa ser flex para centralizar texto */
-        text-align: center;
-        color: var(--text);
-        font-size: 0.9rem;
-        font-weight: 700;
-        max-width: 350px;
-        margin: 0.4rem auto 0 auto;
-        /* O 'auto' nas laterais centraliza o bloco */
-        width: 100%;
-        /* Garante que ele ocupe o espaço disponível até o max-width */
-    }
-
-
-    .botao-link {
-        width: 80%;
-    }
-
-    .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .footer-column h4:after {
-        margin: 10px auto;
-    }
-
-    .description-content {
-        background-color: #ecac0a;
-        border-radius: 8px;
-        padding: 0.2;
-        text-wrap: balance;
-        width: 100%;
-        ;
-    }
-
-}
-
-@media (max-width: 480px) {
-    .menu-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .menu-item-description {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        color: var(--text);
-        font-size: 0.9rem;
-        font-weight: 700;
-        max-width: 350px;
-        margin-top: 0.4rem;
-    }
-
-    .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .whatsapp-float {
-        width: 40px;
-        height: 40px;
-        font-size: 1.2rem;
+        width: 45px;
+        height: 45px;
         bottom: 15px;
         right: 15px;
     }
-
-    .description-content {
-        background-color: #ecac0a;
-        border-radius: 8px;
-        padding: 0.2;
-        text-wrap: balance;
-        width: 100%;
-        
-    }
-
-       .section-title {
-        font-size: 1rem;
-        
-    }
-
-   .button-ir-misto {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 2.5rem auto 3rem;
-    background-color: #e6a307;
-    display: block;
-    padding: 10px;
-    width: 50%;
-    border-radius: 8px;
-    border: none;
-    transition: transform 0.5s, box-shadow 0.1s;
-}
 }
 
-@media (max-width: 400px) {
-    .menu-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .menu-item-description {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        color: var(--text);
-        font-size: 0.9rem;
-        font-weight: 700;
-        max-width: 350px;
-        margin-top: 0.4rem;
-    }
 
 
 
-    .description-content {
-        background-color: #ecac0a;
-        border-radius: 8px;
-        padding: 0.2;
-        text-wrap: balance;
-        width: 100%;
-        ;
-    }
-
-    .section-title {
-        font-size: 1rem;
-      
-    }
-.button-ir-misto {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 2.5rem auto 3rem;
-    background-color: #e6a307;
-    display: block;
-    padding: 10px;
-    width: 20%;
-    border-radius: 8px;
-    border: none;
-    transition: transform 0.5s, box-shadow 0.1s;
-}
-}
-
-@media (max-width: 375px) {
-    .menu-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .menu-item-description {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        color: var(--text);
-        font-size: 0.9rem;
-        font-weight: 700;
-        max-width: 350px;
-        margin-top: 0.4rem;
-    }
-
-    .description-content {
-        background-color: #ecac0a;
-        border-radius: 8px;
-        padding: 0.2;
-        text-wrap: balance;
-        width: 100%;
-        ;
-    }
-
-    .section-title {
-        font-size: 1rem;
-
-    }
-
- .button-ir-misto {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 2.5rem auto 3rem;
-    background-color: #e6a307;
-    display: block;
-    padding: 10px;
-    width: 60%;
-    border-radius: 8px;
-    border: none;
-    transition: transform 0.5s, box-shadow 0.1s;
-}
-}
-
-@media (max-width: 320px) {
-
-  
-    .menu-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .menu-item-description {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        color: var(--text);
-        font-size: 0.9rem;
-        font-weight: 700;
-        max-width: 350px;
-        margin-top: 0.4rem;
-    }
-
-  
-
-       .section-title {
-        font-size: 1rem;
-        
-    }
-
-    .description-content {
-        background-color: #f3a807;
-        border-radius: 8px;
-        padding: 0.2;
-        text-wrap: balance;
-        width: 100%;
-        ;
-    }
-
-  .button-ir-misto {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 2.5rem auto 3rem;
-    background-color: #e6a307;
-    display: block;
-    padding: 10px;
-    width: 60%;
-    border-radius: 8px;
-    border: none;
-    transition: transform 0.5s, box-shadow 0.1s;
-}
-
-}
 
 
 
