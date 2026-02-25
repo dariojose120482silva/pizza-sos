@@ -1710,6 +1710,13 @@ footer {
 
 /* --- 1. AJUSTES PARA TABLETS E TELAS MÉDIAS (Geral até 992px) --- */
 @media (max-width: 992px) {
+.header-content {
+        display: flex;
+        flex-direction: column;
+      
+        justify-content: center;
+    }
+
     .about-content {
         flex-direction: column; /* Empilha imagem e texto */
     }
@@ -1730,6 +1737,15 @@ footer {
 
 /* --- 2. AJUSTES PARA CELULARES (Até 600px) --- */
 @media (max-width: 600px) {
+    .header-content {
+        display: flex;
+        flex-direction: column;
+      
+        justify-content: center;
+    }
+
+   
+
     .section-title { font-size: 1.6rem; }
 
     .menu-grid, .contact-grid, .footer-content {
