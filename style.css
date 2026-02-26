@@ -4,7 +4,7 @@
 
 #pedido {
 
- 
+
 
     background: #ffffff;
 
@@ -14,11 +14,14 @@
 
     padding: 20px;
 
-    width: 95%; /* Mude de 100% para 95% */
+    width: 95%;
+    /* Mude de 100% para 95% */
 
-    margin: 10px auto; /* Centraliza e dá respiro nas bordas */
+    margin: 10px auto;
+    /* Centraliza e dá respiro nas bordas */
 
-    box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
+    box-sizing: border-box;
+    /* Garante que o padding não aumente o tamanho total */
 }
 
 
@@ -124,8 +127,8 @@
 
 
 /* Estiliza apenas o botão de enviar (Finalizar Pedido) */
-#formPedido button[type="submit"], 
-#formPedido .btn-enviar-pedido { 
+#formPedido button[type="submit"],
+#formPedido .btn-enviar-pedido {
     max-width: 100%;
     width: 100%;
     color: #161916;
@@ -1671,15 +1674,19 @@ footer {
 /* Isso tem mais "força" que apenas .btn-remover, então o !important morre */
 /* Botão de Remover - Pequeno e Vermelho */
 #formPedido .btn-remover {
-    width: auto !important; /* Cancela o 100% anterior */
-    background: #ff4444 !important; /* Cancela o laranja */
+    width: auto !important;
+    /* Cancela o 100% anterior */
+    background: #ff4444 !important;
+    /* Cancela o laranja */
     color: white !important;
     padding: 2px 8px !important;
     font-size: 0.8rem !important;
     border-radius: 4px !important;
     margin-left: 10px !important;
-    display: inline-flex !important; /* Garante que ele fique do lado do preço */
-    text-shadow: none !important; /* Remove o brilho vermelho do botão laranja */
+    display: inline-flex !important;
+    /* Garante que ele fique do lado do preço */
+    text-shadow: none !important;
+    /* Remove o brilho vermelho do botão laranja */
     box-shadow: none !important;
 }
 
@@ -1696,41 +1703,49 @@ footer {
 }
 
 .item-carrinho span {
-    max-width: 150px; /* Impede que o nome da pizza empurre o botão "X" para fora */
+    max-width: 150px;
+    /* Impede que o nome da pizza empurre o botão "X" para fora */
     overflow: hidden;
-    text-overflow: ellipsis; /* Coloca "..." se o nome for muito grande */
+    text-overflow: ellipsis;
+    /* Coloca "..." se o nome for muito grande */
     white-space: nowrap;
 }
 
 .menu-item-image {
-    height: auto; 
+    height: auto;
     min-height: 200px;
     max-height: 290px;
 }
 
 /* --- 1. AJUSTES PARA TABLETS E TELAS MÉDIAS (Geral até 992px) --- */
 @media (max-width: 992px) {
-.header-content {
+    .header-content {
         display: flex;
         flex-direction: column;
-      
+
         justify-content: center;
     }
 
     .about-content {
-        flex-direction: column; /* Empilha imagem e texto */
+        flex-direction: column;
+        /* Empilha imagem e texto */
     }
 
-    .hero h2 { font-size: 2.2rem; }
-    
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+
     .contact-grid {
-        grid-template-columns: 1fr 1fr; /* Duas colunas */
+        grid-template-columns: 1fr 1fr;
+        /* Duas colunas */
         gap: 15px;
     }
 
     /* Ajuste global dos botões para telas menores */
-    .button-ir-misto, .button-voltar-tradicional {
-        width: 60%; /* Largura maior que no PC, menor que no mobile total */
+    .button-ir-misto,
+    .button-voltar-tradicional {
+        width: 60%;
+        /* Largura maior que no PC, menor que no mobile total */
         margin: 2rem auto;
     }
 }
@@ -1740,24 +1755,136 @@ footer {
     .header-content {
         display: flex;
         flex-direction: column;
-      
         justify-content: center;
+        align-items: center;
+        padding: 10px;
     }
 
-   
-
-    .section-title { font-size: 1.6rem; }
-
-    .menu-grid, .contact-grid, .footer-content {
-        grid-template-columns: 1fr; /* Tudo em uma coluna só */
+    .header-content>div:first-child {
+        flex: 0 0 100%;
+        display: flex;
+        justify-content: center;
+        /* Centraliza a logo no meio */
+        margin-bottom: 15px;
     }
 
-    .button-ir-misto, .button-voltar-tradicional {
-        width: 85%; /* Quase largura total para facilitar o toque com o polegar */
+    .header-content img {
+        max-width: 60%;
+        height: auto;
+        height: auto;
     }
 
-    .hero h2 { font-size: 1.8rem; }
+
+
+    .sos-pizza {
+        flex: 0 0 55%;
+        /* Ocupa o lado esquerdo */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        /* ALINHAMENTO DAS PRIMEIRAS LETRAS */
+        text-align: left;
+    }
+
+    .sos-pizza h1 {
+        font-size: 1.4rem;
+        margin: 0;
+        padding: 0;
+        white-space: nowrap;
+    }
+
+
+
+
+    .span-delivery {
+        display: block;
+        font-size: 18px;
+        /* Ajustado para não quebrar o layout */
+        line-height: 1.3;
+        margin-top: 1px;
+        max-width: 890px;
+        text-align: left;
+
+        /* 2. Força a quebra de palavras se necessário */
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+
+    /* 3. Ajuste fino da largura (tente diminuir para forçar a 4ª linha) */
+    width: 160px; 
+    max-width: 160px;
     
+    font-size: 18px;
+    line-height: 1.3;
+    text-align: left;
+    }
+
+
+
+    .sos-pizza-nav {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        /* Mantém o alinhamento no topo entre H1 e Nav */
+
+        width: 100%;
+        max-width: 250px;
+        /* Limite que você definiu */
+        margin: 10px auto 0 auto;
+        /* O 'auto' nas laterais centraliza o bloco */
+
+        line-height: 1.2;
+        padding: 0;
+gap: 80px;
+  
+    }
+
+
+
+
+
+    nav {
+        flex: 0 0 40%;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+
+        gap: 6px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    nav a {
+        font-size: 0.8rem;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+
+
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .menu-grid,
+    .contact-grid,
+    .footer-content {
+        grid-template-columns: 1fr;
+        /* Tudo em uma coluna só */
+    }
+
+    .button-ir-misto,
+    .button-voltar-tradicional {
+        width: 85%;
+        /* Quase largura total para facilitar o toque com o polegar */
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
     .whatsapp-float {
         width: 45px;
         height: 45px;
@@ -1765,11 +1892,3 @@ footer {
         right: 15px;
     }
 }
-
-
-
-
-
-
-
-
