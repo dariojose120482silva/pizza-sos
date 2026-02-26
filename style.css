@@ -341,16 +341,9 @@ html {
 
 
 body {
-
-    background-size: cover;
-
-    /* Opcional: Adiciona um pouco de preenchimento para o texto não ficar colado nas bordas */
-    padding: 60px 20px;
-
-    background-color: #f9eec9;
-    color: var(--text);
+    padding: 30px;
+    background-color: #280204;
     line-height: 1.6;
-    padding-top: 120px;
     font-family: "Inter", sans-serif;
 }
 
@@ -364,14 +357,15 @@ body {
 
 /* Header Fixo */
 header {
-    padding: 60px 20px;
+    
+   
     text-shadow: 2px 2px 4px rgba(10, 10, 10, 0.5);
-    top: 0;
-    left: 0;
+    margin-top: 0;
     width: 100%;
+    
     background: linear-gradient(90deg, var(--primary), var(--accent));
     color: #FFB347;
-    padding: 15px 0;
+    padding: 5px 0;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     transition: all 0.3s ease;
@@ -381,7 +375,7 @@ header {
  display: flex;
     align-items: center;      /* Alinha verticalmente ao centro */
     justify-content: space-between; /* Logo na esquerda, restante na direita */
-    padding: 20px 0;
+    padding: 0;
     width: 100%;
 }
 
@@ -389,8 +383,9 @@ header {
 
 
 .logo-img img {
-    width: 200px;
-    height: auto
+    width: 120px;
+    height: auto;
+    display: block;
 }
 
 .sos-pizza-container {
@@ -413,7 +408,7 @@ header {
 
 
 .sos-pizza-container h1 {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     font-weight: 800;
     color: #07fb13;
     margin: 0;
@@ -423,7 +418,7 @@ header {
     font-size: 1.1rem;
     font-weight: 300;
     opacity: 0.9;
-    max-width: 400px;
+    max-width: 500px;
 }
 
 .sos-pizza {
@@ -441,39 +436,32 @@ header {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-/* Configuração Geral para Desktop */
-.header-content {
-    display: flex;
-    align-items: center;      /* Alinha verticalmente ao centro */
-    justify-content: space-between; /* Logo na esquerda, restante na direita */
-    padding: 20px 0;
-    width: 100%;
-}
+
 
 .sos-pizza-nav {
     display: flex;
-    align-items: center;      /* Alinha o texto da pizzaria com o menu */
-    gap: 40px;                /* Espaço entre o texto e a lista do menu */
+    align-items: center;  
+    gap: 40px;        
 }
 
 .sos-pizza-container {
     display: flex;
-    flex-direction: column;   /* Mantém o H1 sobre o Span */
+    flex-direction: column;  
 }
 
+
+
+
 nav ul {
-    display: flex;            /* Deixa os itens do menu (Sobre, Contato) em linha */
+    display: flex;
     list-style: none;
-    gap: 20px;                /* Espaço entre os links do menu */
-    margin: 0;
-    padding: 0;
+    gap: 12px;
 }
 
 nav a {
     color: #0c120e;
     text-decoration: none;
-    font-size: 1rem;
-    font-weight: 300;
+    font-weight: 700;
     transition: all 0.3s ease;
     padding: 5px 10px;
     border-radius: 4px
@@ -732,139 +720,6 @@ nav a:hover {
     color: #d41313;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Bai Jamjuree', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-:root {
-    --primary: #8338EC;
-    /* Roxo Vibrante */
-    --secondary: #FFBE0B;
-    /* Amarelo Solar */
-    --accent: #FB5607;
-    /* Laranja Intenso */
-    --body-bg: #121212;
-    /* Fundo Preto Escuro */
-    --section-bg: #1E1E1E;
-    /* Fundo de Seção Cinza Escuro */
-    --text-light: #EAEAEA;
-    /* Texto Claro */
-    --text-dark: #333333;
-    /* Texto para fundos claros */
-}
-
-html {
-    scroll-behavior: smooth;
-    /* Habilita a rolagem suave para 
-     âncoras */
-}
-
-
-body {
-
-    background-size: cover;
-
-    /* Opcional: Adiciona um pouco de preenchimento para o texto não ficar colado nas bordas */
-    padding: 60px 20px;
-
-    background-color: #f9eec9;
-    color: var(--text);
-    line-height: 1.6;
-    padding-top: 120px;
-    font-family: "Inter", sans-serif;
-}
-
-.container {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 auto;
-    padding: 0 10px;
-}
-
-/* Header Fixo */
-header {
-    padding: 60px 20px;
-    text-shadow: 2px 2px 4px rgba(10, 10, 10, 0.5);
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: linear-gradient(90deg, var(--primary), var(--accent));
-    color: #FFB347;
-    padding: 15px 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    transition: all 0.3s ease;
-}
-
-.header-content {
-    list-style: none;
-    display: flex;
-    align-items: center;
-}
-
-
-
-
-.logo-img img {
-    width: 200px;
-    height: auto;
-}
-
-
-
-.logo h1 {
-    font-size: 1.8rem;
-    font-weight: 800;
-    color: #07fb13;
-    margin: 0;
-}
-
-.logo span {
-    font-size: 0.9rem;
-    font-weight: 300;
-    opacity: 0.9;
-}
-
-.sos-pizza {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.1;
-}
-
-.span-delivery {
-    color: #10140f;
-    font-size: large;
-    text-shadow: #f80a02 10px 20px 20px;
-    box-shadow: #820808;
-    box-shadow: #06110a;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 12px;
-}
-
-nav a {
-    color: #0c120e;
-    text-decoration: none;
-    font-weight: 700;
-    transition: all 0.3s ease;
-    padding: 5px 10px;
-    border-radius: 4px
-}
-
-nav a:hover {
-    background: #07e659;
-    color: #d41313;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
 
 /* Botão WhatsApp Fixo */
 .whatsapp-float {
@@ -1092,11 +947,11 @@ nav a:hover {
 
 /* About Section */
 .about {
-    padding: 80px 0;
+    padding: 10px;
     background-color: #e0c18b;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
 
 
@@ -1146,7 +1001,7 @@ nav a:hover {
     color: var(--secondar);
     /* Amarelo para destaque */
     position: relative;
-    color: #065ef7;
+    color: #060709;
     text-shadow: 3px 4px 6px rgba(249, 73, 9, 0.808);
     font-size: 2.2rem;
     font-weight: bold;
@@ -1177,14 +1032,15 @@ nav a:hover {
     gap: 50px;
 }
 
-.about-text {
-    background-color: #f9b60023;
+.about-text p {
+    background-color: #f9b700d0;
+    font-size: 1rem;
+    max-width: 570px;
     flex: 1;
-    padding: 20px;
+    padding: 8px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(241, 4, 4, 0.1);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    margin-bottom: 1rem;
 }
 
 .s-o-s {
@@ -1211,16 +1067,7 @@ nav a:hover {
 }
 
 
-.about-text p {
-    margin-bottom: 20px;
-    font-size: 1.3rem;
-    color: var(--text-ligh);
-    color: #0c0c07;
 
-    opacity: 0.9;
-
-
-}
 
 .about-image {
     flex: 1;
@@ -1246,8 +1093,8 @@ nav a:hover {
 
     background-size: cover;
     background-position: center;
-    padding: 80px 0;
-    background-color: #90a74c7f;
+    padding: 10px 0;
+    background-color: #a3b66a;
     border-radius: 10px;
     margin-bottom: 50px;
 }
@@ -1398,15 +1245,6 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
-.promotion p {
-
-    padding: 10px;
-    background-color: #25d3aa9f;
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto 30px;
-
-}
 
 .promocao {
     display: flex;
@@ -1434,10 +1272,14 @@ nav a:hover {
 
 /* Contact Section */
 .contact {
-    padding: 80px 0;
-    background-color: #58483a6f;
+    padding: 20px;
+    background-color: #e2ee43;
     border-radius: 10px;
     margin-bottom: 50px;
+}
+
+.contact-details {
+    background-color: #82a7e8;
 }
 
 .contact-grid {
@@ -1446,7 +1288,8 @@ nav a:hover {
     gap: 30px;
 }
 
-.contact-item {
+.contact-item  {
+  
     gap: 40px;
 }
 
@@ -1463,14 +1306,14 @@ nav a:hover {
 }
 
 .contact-icon {
-    background-color: var(--light);
+ 
     width: 50px;
     height: 50px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--primary);
+    color: #eb0808;
     font-size: 1.2rem;
 }
 
@@ -1482,7 +1325,7 @@ nav a:hover {
 /* Estilização básica do botão de ação */
 .btn-adicionar-pedido {
     display: inline-block;
-    background-color: #388E3c;
+    background-color: #2f8d34;
     /* Exemplo de cor verde (Ação) */
     color: white;
     padding: 8px 15px;
