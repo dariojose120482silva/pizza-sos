@@ -342,7 +342,7 @@ html {
 
 body {
     padding: 30px;
-    background-color: #280204;
+    background-color: #f5e9cd;
     line-height: 1.6;
     font-family: "Inter", sans-serif;
 }
@@ -1750,5 +1750,29 @@ footer {
         height: 45px;
         bottom: 15px;
         right: 15px;
+    }
+}
+
+@media (max-width: 375px) {
+    /* Ajuste específico para a quebra de linha do texto de delivery */
+    .span-delivery {
+        display: block;
+        width: 100%; 
+        max-width: 240px; /* Ajuste este valor para forçar a quebra onde desejar */
+        font-size: 16px;   /* Leve redução para garantir que caiba no visor */
+        line-height: 1.4;
+        margin-top: 5px;
+        text-align: left;
+        word-wrap: break-word;
+    }
+
+    /* Garante que o container do texto e do nav não esprema o conteúdo */
+    .sos-pizza-nav {
+        gap: 20px; /* Reduzi de 40px para 20px para ganhar respiro lateral */
+        align-items: flex-start;
+    }
+
+    .sos-pizza h1 {
+        font-size: 1.4rem;
     }
 }
