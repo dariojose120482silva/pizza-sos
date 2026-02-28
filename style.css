@@ -1619,7 +1619,7 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 10px;
+        padding: 20px;
     }
 
     .header-content>div:first-child {
@@ -1755,7 +1755,7 @@ footer {
 
 @media (max-width: 375px) {
     .header-content {
-        padding: 20px;
+        padding: 10px;
     }
     /* Ajuste específico para a quebra de linha do texto de delivery */
     .span-delivery {
@@ -1771,7 +1771,7 @@ footer {
 
     /* Garante que o container do texto e do nav não esprema o conteúdo */
     .sos-pizza-nav {
-        gap: 10px; /* Reduzi de 40px para 20px para ganhar respiro lateral */
+        gap: 20px; /* Reduzi de 40px para 20px para ganhar respiro lateral */
         align-items: flex-start;
     }
 
