@@ -1754,11 +1754,14 @@ footer {
 }
 
 @media (max-width: 375px) {
+    .header-content {
+        padding: 20px;
+    }
     /* Ajuste específico para a quebra de linha do texto de delivery */
     .span-delivery {
         display: block;
         width: 100%; 
-        max-width: 240px; /* Ajuste este valor para forçar a quebra onde desejar */
+        max-width: 340px; /* Ajuste este valor para forçar a quebra onde desejar */
         font-size: 16px;   /* Leve redução para garantir que caiba no visor */
         line-height: 1.4;
         margin-top: 5px;
@@ -1768,7 +1771,7 @@ footer {
 
     /* Garante que o container do texto e do nav não esprema o conteúdo */
     .sos-pizza-nav {
-        gap: 20px; /* Reduzi de 40px para 20px para ganhar respiro lateral */
+        gap: 10px; /* Reduzi de 40px para 20px para ganhar respiro lateral */
         align-items: flex-start;
     }
 
