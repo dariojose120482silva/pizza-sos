@@ -44,7 +44,7 @@
 
     font-size: 1.8rem !important;
 
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+    font-family: 'Inter', Arial, sans-serif !important;
 
     text-shadow: #fa2609 0px 0px 10px !important;
 
@@ -313,7 +313,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Bai Jamjuree', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Rubik', sans-serif;
 }
 
 :root {
@@ -580,7 +580,7 @@ nav a:hover {
     /* Laranja/Amarelo */
     margin-bottom: 25px !important;
     font-size: 1.8rem !important;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+    font-family: 'Rubik', Arial, sans-serif !important;
     text-shadow: #fa2609 0px 0px 10px !important;
     /* Brilho neon vermelho */
     display: block !important;
@@ -875,7 +875,7 @@ nav a:hover {
 
 .link {
     color: #080813;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Rubik', Arial, sans-serif;
     text-decoration: none;
     text-shadow: #e61d07 2px 0px 0px;
 }
@@ -1106,7 +1106,7 @@ nav a:hover {
 }
 
 .menu-item {
-    background-color: #f1dd94;
+    background-color: #ece168;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 12px 12px rgba(0, 0, 0, 0.1);
@@ -1149,11 +1149,11 @@ nav a:hover {
 }
 
 .menu-item-content {
-    background-color: #f6e6b0;
+ 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 0.4rem;
+    padding: 0.3rem;
     flex-direction: column;
     align-items: center;
 }
@@ -1205,10 +1205,15 @@ nav a:hover {
 }
 
 .description-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: #ecac0e;
     border-radius: 8px;
     padding: 0.2rem;
     text-wrap: balance;
+    width: 100%;
 }
 
 .description {
@@ -1728,6 +1733,10 @@ footer {
         font-size: 1.6rem;
     }
 
+    .section-title-central{
+        font-size: 1.6rem;
+    }
+
     .menu-grid,
     .contact-grid,
     .footer-content {
@@ -1776,6 +1785,15 @@ footer {
     }
 
     .sos-pizza h1 {
+        font-size: 1.4rem;
+    }
+
+    
+    .section-title {
+        font-size: 1.4rem;
+    }
+
+    .section-title-central{
         font-size: 1.4rem;
     }
 }
